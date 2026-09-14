@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,13 +15,13 @@
     body {
       margin: 0;
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
-      background: #f4f6f8;
+      background: #f5f7fa;
       color: #1d2939;
       font-size: 14px;
     }
 
     /* =========================
-       TOP HEADER
+       TOP BAR
        ========================= */
 
     .topbar {
@@ -42,15 +43,15 @@
     .brand-logo {
       width: 38px;
       height: 38px;
-      background: #173b57;
-      color: #ffffff;
       border-radius: 7px;
+      background: #173b57;
+      color: white;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 16px;
       font-weight: 700;
-      letter-spacing: 0.5px;
+      font-size: 15px;
+      letter-spacing: 0.4px;
     }
 
     .brand-name {
@@ -60,33 +61,33 @@
     }
 
     .brand-subtitle {
+      margin-top: 2px;
       font-size: 12px;
       color: #667085;
-      margin-top: 2px;
     }
 
-    .profile {
+    .account {
       display: flex;
       align-items: center;
       gap: 11px;
     }
 
-    .profile-text {
+    .account-text {
       text-align: right;
     }
 
-    .profile-name {
+    .account-name {
       font-weight: 600;
       color: #344054;
     }
 
-    .profile-role {
+    .account-role {
+      margin-top: 2px;
       font-size: 12px;
       color: #98a2b3;
-      margin-top: 2px;
     }
 
-    .avatar {
+    .account-avatar {
       width: 38px;
       height: 38px;
       border-radius: 50%;
@@ -96,24 +97,21 @@
       align-items: center;
       justify-content: center;
       font-weight: 700;
+      font-size: 13px;
     }
 
     /* =========================
-       MAIN LAYOUT
+       PAGE LAYOUT
        ========================= */
 
-    .app-layout {
+    .layout {
       display: flex;
       min-height: calc(100vh - 68px);
     }
 
-    /* =========================
-       SIDEBAR
-       ========================= */
-
     .sidebar {
       width: 220px;
-      background: #ffffff;
+      background: white;
       border-right: 1px solid #e4e7ec;
       padding: 24px 14px;
     }
@@ -121,18 +119,18 @@
     .nav-title {
       padding: 0 12px;
       margin-bottom: 8px;
+      color: #98a2b3;
       font-size: 11px;
       font-weight: 700;
-      color: #98a2b3;
       text-transform: uppercase;
       letter-spacing: 0.7px;
     }
 
     .nav-item {
       padding: 11px 12px;
+      margin-bottom: 4px;
       border-radius: 6px;
       color: #475467;
-      margin-bottom: 4px;
       display: flex;
       align-items: center;
       gap: 10px;
@@ -150,20 +148,20 @@
       text-align: center;
     }
 
-    /* =========================
-       CONTENT
-       ========================= */
-
     .main {
       flex: 1;
-      padding: 28px 34px 48px;
       max-width: 1400px;
+      padding: 28px 34px 50px;
     }
 
+    /* =========================
+       PAGE HEADER
+       ========================= */
+
     .breadcrumb {
+      margin-bottom: 13px;
       color: #667085;
       font-size: 13px;
-      margin-bottom: 13px;
     }
 
     .breadcrumb span {
@@ -199,6 +197,10 @@
       font-weight: 650;
     }
 
+    /* =========================
+       CONTENT GRID
+       ========================= */
+
     .content-grid {
       display: grid;
       grid-template-columns: minmax(0, 1fr) 310px;
@@ -211,10 +213,10 @@
        ========================= */
 
     .card {
-      background: #ffffff;
+      margin-bottom: 18px;
+      background: white;
       border: 1px solid #e4e7ec;
       border-radius: 8px;
-      margin-bottom: 18px;
     }
 
     .card-header {
@@ -223,15 +225,15 @@
     }
 
     .card-title {
+      color: #101828;
       font-size: 16px;
       font-weight: 650;
-      color: #101828;
     }
 
     .card-description {
       margin-top: 4px;
-      font-size: 13px;
       color: #667085;
+      font-size: 13px;
     }
 
     .card-body {
@@ -239,75 +241,21 @@
     }
 
     /* =========================
-       EMPLOYEE INFO
-       ========================= */
-
-    .employee-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      gap: 22px;
-    }
-
-    .info-label {
-      font-size: 12px;
-      color: #667085;
-      margin-bottom: 5px;
-    }
-
-    .info-value {
-      color: #344054;
-      font-weight: 600;
-    }
-
-    /* =========================
-       EXPENSE TYPE
-       ========================= */
-
-    .expense-type {
-      border: 1px solid #e4e7ec;
-      background: #f9fafb;
-      border-radius: 7px;
-      padding: 13px 15px;
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      margin-bottom: 21px;
-    }
-
-    .expense-icon {
-      width: 38px;
-      height: 38px;
-      background: #e7eef4;
-      border-radius: 7px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 19px;
-    }
-
-    .expense-title {
-      font-weight: 650;
-      color: #344054;
-    }
-
-    .expense-subtitle {
-      margin-top: 2px;
-      color: #667085;
-      font-size: 12px;
-    }
-
-    /* =========================
        FORM
        ========================= */
-
-    .form-group {
-      margin-bottom: 20px;
-    }
 
     .form-row {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 18px;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    .form-group:last-child {
+      margin-bottom: 0;
     }
 
     label {
@@ -327,10 +275,16 @@
       padding: 10px 12px;
       border: 1px solid #d0d5dd;
       border-radius: 6px;
-      background: #ffffff;
+      background: white;
+      color: #101828;
       font-family: inherit;
       font-size: 14px;
-      color: #101828;
+      transition: 0.15s ease;
+    }
+
+    input:hover,
+    textarea:hover {
+      border-color: #98a2b3;
     }
 
     input:focus,
@@ -354,6 +308,43 @@
     .readonly {
       background: #f9fafb;
       color: #667085;
+    }
+
+    /* =========================
+       EXPENSE TYPE
+       ========================= */
+
+    .expense-type {
+      margin-bottom: 21px;
+      padding: 13px 15px;
+      border: 1px solid #e4e7ec;
+      border-radius: 7px;
+      background: #f9fafb;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .expense-icon {
+      width: 38px;
+      height: 38px;
+      border-radius: 7px;
+      background: #e7eef4;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 19px;
+    }
+
+    .expense-title {
+      color: #344054;
+      font-weight: 650;
+    }
+
+    .expense-subtitle {
+      margin-top: 2px;
+      color: #667085;
+      font-size: 12px;
     }
 
     /* =========================
@@ -381,6 +372,7 @@
       color: #344054;
       font-weight: 600;
       text-align: right;
+      word-break: break-word;
     }
 
     .summary-total {
@@ -388,8 +380,8 @@
       padding-top: 15px;
       border-top: 1px solid #d0d5dd;
       display: flex;
-      justify-content: space-between;
       align-items: flex-end;
+      justify-content: space-between;
     }
 
     .summary-total-label {
@@ -406,26 +398,26 @@
     .summary-note {
       margin-top: 18px;
       padding: 13px;
-      background: #f8fafc;
       border: 1px solid #e4e7ec;
       border-radius: 6px;
+      background: #f8fafc;
       color: #667085;
       font-size: 12px;
       line-height: 1.5;
     }
 
     /* =========================
-       SUBMIT BAR
+       SUBMIT
        ========================= */
 
     .submit-bar {
-      background: #ffffff;
+      padding: 16px 20px;
+      background: white;
       border: 1px solid #e4e7ec;
       border-radius: 8px;
-      padding: 16px 20px;
       display: flex;
-      justify-content: space-between;
       align-items: center;
+      justify-content: space-between;
     }
 
     .submit-note {
@@ -439,7 +431,7 @@
       border: 1px solid #173b57;
       border-radius: 6px;
       background: #173b57;
-      color: #ffffff;
+      color: white;
       font-family: inherit;
       font-size: 14px;
       font-weight: 650;
@@ -451,7 +443,7 @@
     }
 
     /* =========================
-       SUCCESS MESSAGE
+       SUCCESS PANEL
        ========================= */
 
     #submissionResult {
@@ -483,14 +475,14 @@
 
     .success-title {
       color: #05603a;
-      font-weight: 650;
       font-size: 15px;
+      font-weight: 650;
     }
 
     .success-details {
-      margin-top: 5px;
+      margin-top: 6px;
       color: #067647;
-      line-height: 1.5;
+      line-height: 1.6;
     }
 
     #claimId,
@@ -505,8 +497,8 @@
     .footer {
       margin-top: 24px;
       text-align: center;
-      font-size: 11px;
       color: #98a2b3;
+      font-size: 11px;
     }
 
     @media (max-width: 950px) {
@@ -519,10 +511,6 @@
         grid-template-columns: 1fr;
       }
 
-      .employee-grid {
-        grid-template-columns: 1fr;
-      }
-
       .summary-card {
         position: static;
       }
@@ -532,13 +520,14 @@
       }
     }
   </style>
+
 </head>
 
 <body>
 
-  <!-- ==================================
-       HEADER
-       ================================== -->
+  <!-- =========================
+       TOP BAR
+       ========================= -->
 
   <header class="topbar">
 
@@ -549,6 +538,7 @@
       </div>
 
       <div>
+
         <div class="brand-name">
           Northbridge Securities
         </div>
@@ -556,25 +546,28 @@
         <div class="brand-subtitle">
           Corporate Services
         </div>
+
       </div>
 
     </div>
 
 
-    <div class="profile">
+    <div class="account">
 
-      <div class="profile-text">
-        <div class="profile-name">
-          Alex Tan
+      <div class="account-text">
+
+        <div class="account-name">
+          Finance Automation
         </div>
 
-        <div class="profile-role">
-          Capital Markets Operations
+        <div class="account-role">
+          Service Account
         </div>
+
       </div>
 
-      <div class="avatar">
-        AT
+      <div class="account-avatar">
+        FA
       </div>
 
     </div>
@@ -582,11 +575,11 @@
   </header>
 
 
-  <!-- ==================================
-       BODY
-       ================================== -->
+  <!-- =========================
+       PAGE
+       ========================= -->
 
-  <div class="app-layout">
+  <div class="layout">
 
     <!-- SIDEBAR -->
 
@@ -637,7 +630,7 @@
     </aside>
 
 
-    <!-- MAIN CONTENT -->
+    <!-- MAIN -->
 
     <main class="main">
 
@@ -657,7 +650,7 @@
           </h1>
 
           <p>
-            Submit an overtime transportation reimbursement request.
+            Submit an overtime taxi reimbursement request for processing.
           </p>
 
         </div>
@@ -692,13 +685,12 @@
               Expense claim submitted successfully
             </div>
 
-
             <div class="success-details">
 
               Claim ID:
               <span id="claimId"></span>
 
-              &nbsp;&nbsp;|&nbsp;&nbsp;
+              <br>
 
               Submission Status:
               <span id="submissionStatus">
@@ -720,23 +712,25 @@
         <div class="content-grid">
 
 
-          <!-- LEFT SIDE -->
+          <!-- =========================
+               LEFT SIDE
+               ========================= -->
 
           <div>
 
 
-            <!-- EMPLOYEE INFORMATION -->
+            <!-- CLAIMANT INFORMATION -->
 
             <section class="card">
 
               <div class="card-header">
 
                 <div class="card-title">
-                  Employee Information
+                  Claimant Information
                 </div>
 
                 <div class="card-description">
-                  Retrieved automatically from the employee profile.
+                  Enter the employee information for this reimbursement batch.
                 </div>
 
               </div>
@@ -744,55 +738,50 @@
 
               <div class="card-body">
 
-                <div class="employee-grid">
+
+                <div class="form-row">
 
 
-                  <div>
+                  <div class="form-group">
 
-                    <div class="info-label">
+                    <label for="employeeName">
                       Employee Name
-                    </div>
+                      <span class="required">*</span>
+                    </label>
 
-                    <div
-                      class="info-value"
+                    <input
+                      type="text"
                       id="employeeName"
+                      name="Employee Name"
+                      aria-label="Employee Name"
+                      placeholder="e.g. Daniel Wong"
+                      required
                     >
-                      Alex Tan
-                    </div>
 
                   </div>
 
 
-                  <div>
+                  <div class="form-group">
 
-                    <div class="info-label">
+                    <label for="department">
                       Department
-                    </div>
+                      <span class="required">*</span>
+                    </label>
 
-                    <div
-                      class="info-value"
+                    <input
+                      type="text"
                       id="department"
+                      name="Department"
+                      aria-label="Department"
+                      placeholder="e.g. Capital Markets Operations"
+                      required
                     >
-                      Capital Markets Operations
-                    </div>
-
-                  </div>
-
-
-                  <div>
-
-                    <div class="info-label">
-                      Expense Type
-                    </div>
-
-                    <div class="info-value">
-                      Overtime Taxi
-                    </div>
 
                   </div>
 
 
                 </div>
+
 
               </div>
 
@@ -810,7 +799,7 @@
                 </div>
 
                 <div class="card-description">
-                  Enter the reimbursement batch information.
+                  Enter the processed reimbursement information.
                 </div>
 
               </div>
@@ -840,8 +829,6 @@
                 </div>
 
 
-                <!-- FORMAL INPUT 1 -->
-
                 <div class="form-group">
 
                   <label for="batchId">
@@ -859,13 +846,11 @@
                   >
 
                   <div class="helper">
-                    Processing batch reference from the claims workflow.
+                    Processing batch reference from the upstream workflow.
                   </div>
 
                 </div>
 
-
-                <!-- FORMAL INPUT 2 + 3 -->
 
                 <div class="form-row">
 
@@ -882,8 +867,8 @@
                       id="originalAmount"
                       name="Total Original Amount"
                       aria-label="Total Original Amount"
-                      step="0.01"
                       min="0"
+                      step="0.01"
                       placeholder="0.00"
                       required
                     >
@@ -907,8 +892,8 @@
                       id="reimbursableAmount"
                       name="Total Reimbursable Amount"
                       aria-label="Total Reimbursable Amount"
-                      step="0.01"
                       min="0"
+                      step="0.01"
                       placeholder="0.00"
                       required
                     >
@@ -921,6 +906,7 @@
 
 
                 </div>
+
 
               </div>
 
@@ -938,7 +924,7 @@
                 </div>
 
                 <div class="card-description">
-                  Link the submission to the processed claim record.
+                  Link this submission to the processed claim record.
                 </div>
 
               </div>
@@ -946,8 +932,6 @@
 
               <div class="card-body">
 
-
-                <!-- FORMAL INPUT 4 -->
 
                 <div class="form-group">
 
@@ -971,8 +955,6 @@
 
                 </div>
 
-
-                <!-- DISPLAYED BUT NOT PART OF FORMAL INTERFACE -->
 
                 <div class="form-group">
 
@@ -1010,8 +992,8 @@
 
               <button
                 type="submit"
-                class="submit-button"
                 id="submitButton"
+                class="submit-button"
                 aria-label="Submit"
               >
                 Submit
@@ -1023,7 +1005,9 @@
           </div>
 
 
-          <!-- RIGHT SIDE SUMMARY -->
+          <!-- =========================
+               RIGHT SIDE SUMMARY
+               ========================= -->
 
           <aside>
 
@@ -1041,6 +1025,38 @@
 
 
               <div class="card-body">
+
+
+                <div class="summary-row">
+
+                  <div class="summary-label">
+                    Employee
+                  </div>
+
+                  <div
+                    class="summary-value"
+                    id="summaryEmployee"
+                  >
+                    —
+                  </div>
+
+                </div>
+
+
+                <div class="summary-row">
+
+                  <div class="summary-label">
+                    Department
+                  </div>
+
+                  <div
+                    class="summary-value"
+                    id="summaryDepartment"
+                  >
+                    —
+                  </div>
+
+                </div>
 
 
                 <div class="summary-row">
@@ -1130,12 +1146,17 @@
   </div>
 
 
-  <!-- ==================================
+  <!-- =========================
        SCRIPT
-       ================================== -->
+       ========================= -->
 
   <script>
 
+    const employeeName =
+      document.getElementById("employeeName");
+
+    const department =
+      document.getElementById("department");
 
     const originalAmount =
       document.getElementById("originalAmount");
@@ -1156,6 +1177,38 @@
       return "S$" + number.toFixed(2);
 
     }
+
+
+    employeeName.addEventListener(
+      "input",
+      function () {
+
+        const value =
+          employeeName.value.trim();
+
+        document
+          .getElementById("summaryEmployee")
+          .textContent =
+          value || "—";
+
+      }
+    );
+
+
+    department.addEventListener(
+      "input",
+      function () {
+
+        const value =
+          department.value.trim();
+
+        document
+          .getElementById("summaryDepartment")
+          .textContent =
+          value || "—";
+
+      }
+    );
 
 
     originalAmount.addEventListener(
@@ -1256,13 +1309,8 @@
         }
       );
 
-
   </script>
 
 </body>
-</html>
 
-</script>
-
-</body>
 </html>
