@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Employee Reimbursement Portal</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f4f6f8;
+      color: #1f2937;
+    }
+
+    .header {
+      background: #17365d;
+      color: white;
+      padding: 24px 40px;
+    }
+
+    .header h1 {
+      margin: 0;
+      font-size: 26px;
+    }
+
+    .header p {
+      margin: 7px 0 0;
+      color: #dbe7f5;
+      font-size: 14px;
+    }
+
+    .container {
+      width: 720px;
+      max-width: calc(100% - 40px);
+      margin: 35px auto;
+    }
+
+    .card {
+      background: white;
+      border-radius: 10px;
+      padding: 30px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    }
+
+    .section-title {
+      font-size: 20px;
+      font-weight: bold;
+      margin-bottom: 6px;
+    }
+
+    .section-subtitle {
+      font-size: 14px;
+      color: #6b7280;
+      margin-bottom: 25px;
+    }
+
+    .form-group {
+      margin-bottom: 18px;
+    }
+
+    label {
+      display: block;
+      font-weight: 600;
+      font-size: 14px;
+      margin-bottom: 7px;
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      border: 1px solid #cbd5e1;
+      border-radius: 6px;
+      padding: 11px 12px;
+      font-size: 14px;
+      background: white;
+    }
+
+    input:focus,
+    textarea:focus {
+      outline: none;
+      border-color: #17365d;
+    }
+
+    textarea {
+      min-height: 85px;
+      resize: vertical;
+    }
+
+    .amount-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+
+    button {
+      width: 100%;
+      border: none;
+      border-radius: 6px;
+      padding: 13px;
+      font-size: 15px;
+      font-weight: bold;
+      color: white;
+      background: #17365d;
+      cursor: pointer;
+      margin-top: 5px;
+    }
+
+    button:hover {
+      background: #0f2745;
+    }
+
+    #submissionResult {
+      display: none;
+      margin-top: 25px;
+      padding: 20px;
+      background: #ecfdf3;
+      border: 1px solid #86efac;
+      border-radius: 8px;
+    }
+
+    .success-title {
+      color: #166534;
+      font-size: 18px;
+      font-weight: bold;
+      margin-bottom: 12px;
+    }
+
+    .result-row {
+      margin-top: 8px;
+      font-size: 14px;
+    }
+
+    .result-label {
+      font-weight: bold;
+    }
+
+    #claimId {
+      font-weight: bold;
+      color: #17365d;
+    }
+
+    #submissionStatus {
+      font-weight: bold;
+      color: #166534;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="header">
+    <h1>Employee Reimbursement Portal</h1>
+    <p>Overtime Taxi Claim Submission</p>
+  </div>
+
+  <div class="container">
+
+    <div class="card">
+
+      <div class="section-title">Submit Reimbursement Claim</div>
+
+      <div class="section-subtitle">
+        Complete the claim information below and submit for processing.
+      </div>
+
+      <form id="claimForm">
+
+        <div class="form-group">
+          <label for="employeeName">Employee Name</label>
+          <input
+            type="text"
+            id="employeeName"
+            name="Employee Name"
+            required
+          >
+        </div>
+
+        <div class="form-group">
+          <label for="department">Department</label>
+          <input
+            type="text"
+            id="department"
+            name="Department"
+            required
+          >
+        </div>
+
+        <div class="form-group">
+          <label for="batchId">Batch ID</label>
+          <input
+            type="text"
+            id="batchId"
+            name="Batch ID"
+            required
+          >
+        </div>
+
+        <div class="amount-row">
+
+          <div class="form-group">
+            <label for="originalAmount">Total Original Amount (SGD)</label>
+            <input
+              type="number"
+              id="originalAmount"
+              name="Total Original Amount"
+              step="0.01"
+              required
+            >
+          </div>
+
+          <div class="form-group">
+            <label for="reimbursableAmount">Total Reimbursable Amount (SGD)</label>
+            <input
+              type="number"
+              id="reimbursableAmount"
+              name="Total Reimbursable Amount"
+              step="0.01"
+              required
+            >
+          </div>
+
+        </div>
+
+        <div class="form-group">
+          <label for="detailsLink">Details Link</label>
+          <input
+            type="url"
+            id="detailsLink"
+            name="Details Link"
+            placeholder="https://..."
+            required
+          >
+        </div>
+
+        <div class="form-group">
+          <label for="remarks">Remarks</label>
+          <textarea
+            id="remarks"
+            name="Remarks"
+          ></textarea>
+        </div>
+
+        <button type="submit" id="submitClaim">
+          Submit Claim
+        </button>
+
+      </form>
+
+      <div id="submissionResult">
+
+        <div class="success-title">
+          ✓ Claim submitted successfully
+        </div>
+
+        <div class="result-row">
+          <span class="result-label">Claim ID:</span>
+          <span id="claimId"></span>
+        </div>
+
+        <div class="result-row">
+          <span class="result-label">Submission Status:</span>
+          <span id="submissionStatus">SUCCESS</span>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <script>
+    document
+      .getElementById("claimForm")
+      .addEventListener("submit", function(event) {
+
+        event.preventDefault();
+
+        const batchId =
+          document.getElementById("batchId").value.trim();
+
+        const safeBatchId =
+          batchId.replace(/[^a-zA-Z0-9]/g, "").toUpperCase();
+
+        const claimId =
+          "CLM-" + safeBatchId + "-001";
+
+        document.getElementById("claimId").textContent =
+          claimId;
+
+        document.getElementById("submissionStatus").textContent =
+          "SUCCESS";
+
+        document.getElementById("submissionResult").style.display =
+          "block";
+
+        document.getElementById("submissionResult")
+          .scrollIntoView({ behavior: "smooth" });
+
+      });
+  </script>
+
+</body>
+</html>
