@@ -16,6 +16,7 @@
       --navy-950: #0b1f33;
       --navy-900: #102a43;
       --navy-800: #173b57;
+
       --blue-700: #176b8f;
       --blue-600: #2784a8;
       --blue-100: #e9f4f8;
@@ -33,6 +34,7 @@
       --success-border: #a8d7bb;
     }
 
+
     body {
       margin: 0;
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
@@ -41,21 +43,33 @@
       font-size: 14px;
     }
 
+
+    /* =========================
+       TOP BAR
+       ========================= */
+
     .topbar {
       height: 74px;
       padding: 0 34px;
-      background: linear-gradient(
-        115deg,
-        var(--navy-950) 0%,
-        var(--navy-900) 55%,
-        #174861 100%
-      );
+
+      background:
+        linear-gradient(
+          115deg,
+          var(--navy-950) 0%,
+          var(--navy-900) 55%,
+          #174861 100%
+        );
+
       color: white;
+
       display: flex;
       align-items: center;
       justify-content: space-between;
-      box-shadow: 0 3px 12px rgba(11,31,51,0.16);
+
+      box-shadow:
+        0 3px 12px rgba(11, 31, 51, 0.16);
     }
+
 
     .brand {
       display: flex;
@@ -63,30 +77,40 @@
       gap: 14px;
     }
 
+
     .brand-logo {
       width: 42px;
       height: 42px;
+
       border-radius: 10px;
-      background: rgba(255,255,255,0.14);
-      border: 1px solid rgba(255,255,255,0.18);
+
+      background: rgba(255, 255, 255, 0.14);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+
       display: flex;
       align-items: center;
       justify-content: center;
+
       font-size: 15px;
       font-weight: 800;
       letter-spacing: 0.7px;
     }
+
 
     .brand-name {
       font-size: 18px;
       font-weight: 750;
     }
 
+
     .brand-subtitle {
       margin-top: 3px;
-      font-size: 12px;
+
       color: #c8d7e2;
+
+      font-size: 12px;
     }
+
 
     .account {
       display: flex;
@@ -94,101 +118,155 @@
       gap: 12px;
     }
 
+
     .account-text {
       text-align: right;
     }
+
 
     .account-name {
       font-weight: 650;
     }
 
+
     .account-role {
       margin-top: 3px;
-      font-size: 12px;
+
       color: #c8d7e2;
+
+      font-size: 12px;
     }
+
 
     .account-avatar {
       width: 40px;
       height: 40px;
+
       border-radius: 50%;
+
       background: #e4f1f6;
       color: var(--navy-900);
+
       display: flex;
       align-items: center;
       justify-content: center;
-      font-weight: 800;
+
       font-size: 13px;
+      font-weight: 800;
     }
+
+
+    /* =========================
+       LAYOUT
+       ========================= */
 
     .layout {
       display: flex;
       min-height: calc(100vh - 74px);
     }
 
+
+    /* =========================
+       SIDEBAR
+       ========================= */
+
     .sidebar {
       width: 224px;
       padding: 25px 14px;
+
       background: white;
       border-right: 1px solid var(--border);
     }
 
+
     .nav-title {
       padding: 0 12px;
       margin-bottom: 10px;
+
       color: var(--text-muted);
+
       font-size: 11px;
       font-weight: 750;
+
       text-transform: uppercase;
       letter-spacing: 0.8px;
     }
 
+
     .nav-item {
       padding: 11px 12px;
       margin-bottom: 5px;
+
       border-radius: 7px;
+
       color: #52616f;
+
       display: flex;
       align-items: center;
       gap: 11px;
+
       font-weight: 500;
     }
 
+
     .nav-item.active {
       background: var(--blue-100);
+
       color: #174c6e;
+
       font-weight: 700;
-      box-shadow: inset 3px 0 0 var(--blue-700);
+
+      box-shadow:
+        inset 3px 0 0 var(--blue-700);
     }
+
 
     .nav-icon {
       width: 18px;
       text-align: center;
     }
 
+
+    /* =========================
+       MAIN
+       ========================= */
+
     .main {
       flex: 1;
       max-width: 1380px;
+
       padding: 30px 38px 52px;
     }
 
+
     .breadcrumb {
       margin-bottom: 15px;
+
       color: #778895;
+
       font-size: 13px;
     }
 
+
     .breadcrumb span {
       color: var(--blue-700);
+
       font-weight: 650;
     }
 
+
+    /* =========================
+       PAGE HEADER
+       ========================= */
+
     .page-header {
       margin-bottom: 28px;
+
       display: flex;
       justify-content: space-between;
       align-items: flex-start;
     }
+
 
     .page-title-area {
       display: flex;
@@ -196,65 +274,102 @@
       gap: 15px;
     }
 
+
     .title-accent {
       width: 5px;
+
       border-radius: 5px;
-      background: linear-gradient(
-        180deg,
-        var(--blue-600),
-        var(--navy-800)
-      );
+
+      background:
+        linear-gradient(
+          180deg,
+          var(--blue-600),
+          var(--navy-800)
+        );
     }
+
 
     .page-header h1 {
       margin: 0;
+
       color: var(--navy-900);
+
       font-size: 31px;
       line-height: 1.15;
       font-weight: 780;
     }
 
+
     .page-header p {
       margin: 8px 0 0;
+
       color: var(--text-soft);
+
       font-size: 14px;
     }
 
+
     .status-badge {
       padding: 7px 14px;
+
       border: 1px solid #d2dce3;
       border-radius: 20px;
+
       background: #edf1f4;
+
       color: #536674;
+
       font-size: 12px;
       font-weight: 750;
     }
 
+
+    /* =========================
+       CONTENT GRID
+       ========================= */
+
     .content-grid {
       display: grid;
       grid-template-columns: minmax(0, 1fr) 320px;
+
       gap: 24px;
+
       align-items: start;
     }
 
+
+    /* =========================
+       CARDS
+       ========================= */
+
     .card {
       margin-bottom: 20px;
+
       background: var(--card);
+
       border: 1px solid var(--border);
       border-radius: 11px;
+
       overflow: hidden;
-      box-shadow: 0 3px 10px rgba(31,55,75,0.045);
+
+      box-shadow:
+        0 3px 10px rgba(31, 55, 75, 0.045);
     }
+
 
     .card-header {
       padding: 18px 22px;
-      background: linear-gradient(
-        90deg,
-        #f4f9fc,
-        #ffffff
-      );
+
+      background:
+        linear-gradient(
+          90deg,
+          #f4f9fc,
+          #ffffff
+        );
+
       border-bottom: 1px solid var(--border);
     }
+
 
     .card-heading-row {
       display: flex;
@@ -262,297 +377,444 @@
       gap: 11px;
     }
 
+
     .section-number {
       width: 27px;
       height: 27px;
+
       border-radius: 7px;
+
       background: #dcecf4;
       color: var(--blue-700);
+
       display: flex;
       align-items: center;
       justify-content: center;
+
       font-size: 12px;
       font-weight: 800;
     }
 
+
     .card-title {
       color: var(--navy-800);
+
       font-size: 16px;
       font-weight: 760;
     }
 
+
     .card-description {
       margin-top: 5px;
       margin-left: 38px;
+
       color: #748592;
+
       font-size: 13px;
     }
+
 
     .card-body {
       padding: 23px;
     }
 
+
+    /* =========================
+       FORM
+       ========================= */
+
     .form-row {
       display: grid;
       grid-template-columns: 1fr 1fr;
+
       gap: 20px;
     }
+
 
     .form-group {
       margin-bottom: 21px;
     }
 
+
     .form-group:last-child {
       margin-bottom: 0;
     }
 
+
     label {
       display: block;
+
       margin-bottom: 8px;
+
       color: #34495a;
+
       font-weight: 680;
     }
+
 
     .required {
       color: #bf3b3b;
     }
 
+
     .optional {
       margin-left: 4px;
+
       color: #98a5af;
+
       font-size: 12px;
       font-weight: 500;
     }
 
+
     input {
       width: 100%;
+
       padding: 11px 13px;
+
       border: 1px solid #c8d3dc;
       border-radius: 7px;
+
       background: white;
+
       color: var(--text-main);
+
       font-family: inherit;
       font-size: 14px;
+
       transition: 0.15s ease;
     }
+
 
     input:hover {
       border-color: #9cacb9;
     }
 
+
     input:focus {
       outline: none;
+
       border-color: var(--blue-600);
-      box-shadow: 0 0 0 3px rgba(39,132,168,0.12);
+
+      box-shadow:
+        0 0 0 3px rgba(39, 132, 168, 0.12);
     }
+
 
     .helper {
       margin-top: 6px;
+
       color: var(--text-muted);
+
       font-size: 12px;
       line-height: 1.45;
     }
 
+
+    /* =========================
+       EXPENSE TYPE
+       ========================= */
+
     .expense-type {
       margin-bottom: 23px;
       padding: 15px 16px;
+
       border: 1px solid #d3e3eb;
       border-radius: 9px;
-      background: linear-gradient(
-        90deg,
-        #eef7fa,
-        #f8fbfc
-      );
+
+      background:
+        linear-gradient(
+          90deg,
+          #eef7fa,
+          #f8fbfc
+        );
+
       display: flex;
       align-items: center;
       gap: 13px;
     }
 
+
     .expense-icon {
       width: 42px;
       height: 42px;
+
       border-radius: 9px;
+
       background: #d7eaf2;
+
       display: flex;
       align-items: center;
       justify-content: center;
+
       font-size: 20px;
     }
 
+
     .expense-title {
       color: var(--navy-800);
+
       font-weight: 760;
     }
 
+
     .expense-subtitle {
       margin-top: 3px;
+
       color: #687e8d;
+
       font-size: 12px;
     }
+
+
+    /* =========================
+       SUMMARY
+       ========================= */
 
     .summary-card {
       position: sticky;
       top: 20px;
+
       border-top: 4px solid var(--blue-700);
     }
 
+
     .summary-card .card-header {
-      background: linear-gradient(
-        120deg,
-        var(--navy-900),
-        #174861
-      );
+      background:
+        linear-gradient(
+          120deg,
+          var(--navy-900),
+          #174861
+        );
+
       border-bottom: none;
     }
 
+
     .summary-card .card-title {
       color: white;
+
       font-size: 17px;
     }
 
+
     .summary-card .card-description {
-      color: #cfdee7;
       margin-left: 0;
+
+      color: #cfdee7;
     }
+
 
     .summary-row {
       padding: 12px 0;
+
       border-bottom: 1px solid #edf1f4;
+
       display: flex;
       justify-content: space-between;
       gap: 18px;
     }
 
+
     .summary-label {
       color: #71818e;
     }
 
+
     .summary-value {
       color: #34495a;
+
       font-weight: 650;
+
       text-align: right;
+
       word-break: break-word;
     }
+
 
     .summary-total {
       margin-top: 16px;
       padding-top: 18px;
+
       border-top: 2px solid #dce5eb;
+
       display: flex;
       justify-content: space-between;
       align-items: flex-end;
     }
 
+
     .summary-total-label {
       color: #34495a;
+
       font-weight: 700;
     }
 
+
     .summary-total-value {
       color: var(--blue-700);
+
       font-size: 26px;
       font-weight: 820;
     }
 
+
     .summary-note {
       margin-top: 20px;
       padding: 14px;
+
       border-radius: 7px;
+
       background: #f2f7fa;
+
       color: #647987;
+
       font-size: 12px;
       line-height: 1.55;
     }
 
+
+    /* =========================
+       SUBMIT
+       ========================= */
+
     .submit-bar {
       padding: 18px 20px;
+
       background: white;
+
       border: 1px solid var(--border);
       border-radius: 10px;
+
       display: flex;
       justify-content: space-between;
       align-items: center;
-      box-shadow: 0 3px 10px rgba(31,55,75,0.04);
+
+      box-shadow:
+        0 3px 10px rgba(31, 55, 75, 0.04);
     }
+
 
     .submit-note {
       color: #768693;
+
       font-size: 12px;
     }
 
+
     .submit-button {
       min-width: 135px;
+
       padding: 11px 26px;
+
       border: none;
       border-radius: 7px;
-      background: linear-gradient(
-        110deg,
-        var(--blue-700),
-        #155b7c
-      );
+
+      background:
+        linear-gradient(
+          110deg,
+          var(--blue-700),
+          #155b7c
+        );
+
       color: white;
+
       font-family: inherit;
       font-size: 14px;
       font-weight: 760;
+
       cursor: pointer;
-      box-shadow: 0 3px 7px rgba(23,107,143,0.20);
+
+      box-shadow:
+        0 3px 7px rgba(23, 107, 143, 0.20);
     }
+
 
     .submit-button:hover {
       background: #125874;
     }
 
+
+    /* =========================
+       SUCCESS RESULT
+       ========================= */
+
     #submissionResult {
       display: none;
+
       margin-bottom: 23px;
       padding: 19px 21px;
+
       border: 1px solid var(--success-border);
       border-left: 5px solid var(--success);
       border-radius: 9px;
+
       background: var(--success-bg);
     }
+
 
     .success-layout {
       display: flex;
       gap: 14px;
     }
 
+
     .success-icon {
       width: 37px;
       height: 37px;
+
       flex-shrink: 0;
+
       border-radius: 50%;
+
       background: #ccebd7;
       color: var(--success);
+
       display: flex;
       align-items: center;
       justify-content: center;
+
       font-weight: 800;
     }
 
+
     .success-title {
       color: #196a43;
+
       font-size: 16px;
       font-weight: 780;
     }
 
+
     .success-details {
       margin-top: 7px;
+
       color: #367557;
+
       line-height: 1.7;
     }
+
 
     #claimId,
     #submissionStatus {
       font-weight: 800;
     }
 
+
+    /* =========================
+       FOOTER
+       ========================= */
+
     .footer {
       margin-top: 26px;
+
       color: #91a0ad;
+
       font-size: 11px;
+
       text-align: center;
     }
+
 
     @media (max-width: 950px) {
 
@@ -573,11 +835,17 @@
         padding: 22px;
       }
     }
+
   </style>
 </head>
 
 
 <body>
+
+
+  <!-- =========================
+       TOP BAR
+       ========================= -->
 
   <header class="topbar">
 
@@ -625,8 +893,14 @@
   </header>
 
 
+  <!-- =========================
+       PAGE LAYOUT
+       ========================= -->
+
   <div class="layout">
 
+
+    <!-- SIDEBAR -->
 
     <aside class="sidebar">
 
@@ -634,36 +908,44 @@
         Workspace
       </div>
 
+
       <div class="nav-item">
         <span class="nav-icon">⌂</span>
         Home
       </div>
+
 
       <div class="nav-item active">
         <span class="nav-icon">▤</span>
         Expenses
       </div>
 
+
       <div class="nav-item">
         <span class="nav-icon">✓</span>
         Approvals
       </div>
+
 
       <div class="nav-item">
         <span class="nav-icon">◷</span>
         Claim History
       </div>
 
+
       <div style="height: 24px;"></div>
+
 
       <div class="nav-title">
         Resources
       </div>
 
+
       <div class="nav-item">
         <span class="nav-icon">?</span>
         Expense Policy
       </div>
+
 
       <div class="nav-item">
         <span class="nav-icon">⚙</span>
@@ -673,16 +955,20 @@
     </aside>
 
 
+    <!-- MAIN -->
+
     <main class="main">
 
 
       <div class="breadcrumb">
-        Expenses &nbsp;/&nbsp;
+        Expenses
+        &nbsp;/&nbsp;
         <span>New Claim</span>
       </div>
 
 
       <div class="page-header">
+
 
         <div class="page-title-area">
 
@@ -710,8 +996,13 @@
           Draft
         </div>
 
+
       </div>
 
+
+      <!-- =========================
+           SUCCESS RESULT
+           ========================= -->
 
       <div id="submissionResult">
 
@@ -721,6 +1012,7 @@
             ✓
           </div>
 
+
           <div>
 
             <div
@@ -729,6 +1021,7 @@
             >
               Expense claim submitted successfully
             </div>
+
 
             <div class="success-details">
 
@@ -746,10 +1039,15 @@
 
           </div>
 
+
         </div>
 
       </div>
 
+
+      <!-- =========================
+           FORM
+           ========================= -->
 
       <form id="claimForm">
 
@@ -757,8 +1055,14 @@
         <div class="content-grid">
 
 
+          <!-- LEFT COLUMN -->
+
           <div>
 
+
+            <!-- =========================
+                 01 CLAIMANT
+                 ========================= -->
 
             <section class="card">
 
@@ -775,6 +1079,7 @@
                   </div>
 
                 </div>
+
 
                 <div class="card-description">
                   Identify the employee associated with this reimbursement batch.
@@ -808,7 +1113,12 @@
             </section>
 
 
+            <!-- =========================
+                 02 CLAIM DETAILS
+                 ========================= -->
+
             <section class="card">
+
 
               <div class="card-header">
 
@@ -823,6 +1133,7 @@
                   </div>
 
                 </div>
+
 
                 <div class="card-description">
                   Reimbursement information produced by the upstream processing workflow.
@@ -900,7 +1211,7 @@
                     >
 
                     <div class="helper">
-                      SGD · Total taxi amount before reimbursement rules.
+                      CNY · Total taxi amount before reimbursement rules.
                     </div>
 
                   </div>
@@ -925,10 +1236,11 @@
                     >
 
                     <div class="helper">
-                      SGD · Final amount after reimbursement rules.
+                      CNY · Final amount after reimbursement rules.
                     </div>
 
                   </div>
+
 
                 </div>
 
@@ -937,7 +1249,12 @@
             </section>
 
 
+            <!-- =========================
+                 03 SUPPORTING RECORD
+                 ========================= -->
+
             <section class="card">
+
 
               <div class="card-header">
 
@@ -952,6 +1269,7 @@
                   </div>
 
                 </div>
+
 
                 <div class="card-description">
                   Optional reference to the detailed processing record for this claim.
@@ -974,6 +1292,7 @@
 
                   </label>
 
+
                   <input
                     type="url"
                     id="detailsLink"
@@ -981,6 +1300,7 @@
                     aria-label="Supporting Record Link"
                     placeholder="https://..."
                   >
+
 
                   <div class="helper">
                     Use only when a valid supporting record URL is available.
@@ -993,11 +1313,16 @@
             </section>
 
 
+            <!-- =========================
+                 SUBMIT
+                 ========================= -->
+
             <div class="submit-bar">
 
               <div class="submit-note">
                 Required fields are marked with *
               </div>
+
 
               <button
                 type="submit"
@@ -1014,10 +1339,15 @@
           </div>
 
 
+          <!-- =========================
+               RIGHT SUMMARY
+               ========================= -->
+
           <aside>
 
 
             <section class="card summary-card">
+
 
               <div class="card-header">
 
@@ -1054,6 +1384,22 @@
                 <div class="summary-row">
 
                   <div class="summary-label">
+                    Batch ID
+                  </div>
+
+                  <div
+                    class="summary-value"
+                    id="summaryBatch"
+                  >
+                    —
+                  </div>
+
+                </div>
+
+
+                <div class="summary-row">
+
+                  <div class="summary-label">
                     Expense Type
                   </div>
 
@@ -1071,7 +1417,7 @@
                   </div>
 
                   <div class="summary-value">
-                    SGD
+                    CNY
                   </div>
 
                 </div>
@@ -1087,7 +1433,7 @@
                     class="summary-value"
                     id="summaryOriginal"
                   >
-                    S$0.00
+                    ¥0.00
                   </div>
 
                 </div>
@@ -1103,7 +1449,7 @@
                     class="summary-total-value"
                     id="summaryReimbursable"
                   >
-                    S$0.00
+                    ¥0.00
                   </div>
 
                 </div>
@@ -1112,6 +1458,7 @@
                 <div class="summary-note">
                   The reimbursable amount is calculated before portal submission by the upstream reimbursement workflow.
                 </div>
+
 
               </div>
 
@@ -1138,10 +1485,17 @@
   </div>
 
 
+  <!-- =========================
+       SCRIPT
+       ========================= -->
+
   <script>
 
     const employeeName =
       document.getElementById("employeeName");
+
+    const batchId =
+      document.getElementById("batchId");
 
     const originalAmount =
       document.getElementById("originalAmount");
@@ -1150,16 +1504,16 @@
       document.getElementById("reimbursableAmount");
 
 
-    function formatSGD(value) {
+    function formatCNY(value) {
 
       const number =
         parseFloat(value);
 
       if (isNaN(number)) {
-        return "S$0.00";
+        return "¥0.00";
       }
 
-      return "S$" + number.toFixed(2);
+      return "¥" + number.toFixed(2);
 
     }
 
@@ -1177,6 +1531,19 @@
     );
 
 
+    batchId.addEventListener(
+      "input",
+      function () {
+
+        document
+          .getElementById("summaryBatch")
+          .textContent =
+          batchId.value.trim() || "—";
+
+      }
+    );
+
+
     originalAmount.addEventListener(
       "input",
       function () {
@@ -1184,7 +1551,7 @@
         document
           .getElementById("summaryOriginal")
           .textContent =
-          formatSGD(originalAmount.value);
+          formatCNY(originalAmount.value);
 
       }
     );
@@ -1197,7 +1564,7 @@
         document
           .getElementById("summaryReimbursable")
           .textContent =
-          formatSGD(reimbursableAmount.value);
+          formatCNY(reimbursableAmount.value);
 
       }
     );
@@ -1212,7 +1579,7 @@
           event.preventDefault();
 
 
-          const batchId =
+          const batchValue =
             document
               .getElementById("batchId")
               .value
@@ -1220,7 +1587,7 @@
 
 
           const safeBatchId =
-            batchId
+            batchValue
               .replace(/[^a-zA-Z0-9]/g, "")
               .toUpperCase();
 
@@ -1250,11 +1617,14 @@
           pageStatus.textContent =
             "Submitted";
 
+
           pageStatus.style.background =
             "#edf9f2";
 
+
           pageStatus.style.color =
             "#147a4b";
+
 
           pageStatus.style.borderColor =
             "#a8d7bb";
@@ -1280,4 +1650,5 @@
 
 
 </body>
+
 </html>
