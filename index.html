@@ -41,26 +41,19 @@
       font-size: 14px;
     }
 
-    /* =========================
-       TOP BAR
-       ========================= */
-
     .topbar {
       height: 74px;
       padding: 0 34px;
-      background:
-        linear-gradient(
-          115deg,
-          var(--navy-950) 0%,
-          var(--navy-900) 55%,
-          #174861 100%
-        );
+      background: linear-gradient(
+        115deg,
+        var(--navy-950) 0%,
+        var(--navy-900) 55%,
+        #174861 100%
+      );
       color: white;
-
       display: flex;
       align-items: center;
       justify-content: space-between;
-
       box-shadow: 0 3px 12px rgba(11,31,51,0.16);
     }
 
@@ -74,14 +67,11 @@
       width: 42px;
       height: 42px;
       border-radius: 10px;
-
       background: rgba(255,255,255,0.14);
       border: 1px solid rgba(255,255,255,0.18);
-
       display: flex;
       align-items: center;
       justify-content: center;
-
       font-size: 15px;
       font-weight: 800;
       letter-spacing: 0.7px;
@@ -90,7 +80,6 @@
     .brand-name {
       font-size: 18px;
       font-weight: 750;
-      letter-spacing: 0.1px;
     }
 
     .brand-subtitle {
@@ -123,35 +112,23 @@
       width: 40px;
       height: 40px;
       border-radius: 50%;
-
       background: #e4f1f6;
       color: var(--navy-900);
-
       display: flex;
       align-items: center;
       justify-content: center;
-
       font-weight: 800;
       font-size: 13px;
     }
-
-    /* =========================
-       LAYOUT
-       ========================= */
 
     .layout {
       display: flex;
       min-height: calc(100vh - 74px);
     }
 
-    /* =========================
-       SIDEBAR
-       ========================= */
-
     .sidebar {
       width: 224px;
       padding: 25px 14px;
-
       background: white;
       border-right: 1px solid var(--border);
     }
@@ -159,11 +136,9 @@
     .nav-title {
       padding: 0 12px;
       margin-bottom: 10px;
-
       color: var(--text-muted);
       font-size: 11px;
       font-weight: 750;
-
       text-transform: uppercase;
       letter-spacing: 0.8px;
     }
@@ -171,15 +146,11 @@
     .nav-item {
       padding: 11px 12px;
       margin-bottom: 5px;
-
       border-radius: 7px;
-
       color: #52616f;
-
       display: flex;
       align-items: center;
       gap: 11px;
-
       font-weight: 500;
     }
 
@@ -187,9 +158,7 @@
       background: var(--blue-100);
       color: #174c6e;
       font-weight: 700;
-
-      box-shadow:
-        inset 3px 0 0 var(--blue-700);
+      box-shadow: inset 3px 0 0 var(--blue-700);
     }
 
     .nav-icon {
@@ -197,20 +166,14 @@
       text-align: center;
     }
 
-    /* =========================
-       MAIN
-       ========================= */
-
     .main {
       flex: 1;
       max-width: 1380px;
-
       padding: 30px 38px 52px;
     }
 
     .breadcrumb {
       margin-bottom: 15px;
-
       color: #778895;
       font-size: 13px;
     }
@@ -220,13 +183,8 @@
       font-weight: 650;
     }
 
-    /* =========================
-       PAGE HEADER
-       ========================= */
-
     .page-header {
       margin-bottom: 28px;
-
       display: flex;
       justify-content: space-between;
       align-items: flex-start;
@@ -241,86 +199,60 @@
     .title-accent {
       width: 5px;
       border-radius: 5px;
-
-      background:
-        linear-gradient(
-          180deg,
-          var(--blue-600),
-          var(--navy-800)
-        );
+      background: linear-gradient(
+        180deg,
+        var(--blue-600),
+        var(--navy-800)
+      );
     }
 
     .page-header h1 {
       margin: 0;
-
       color: var(--navy-900);
       font-size: 31px;
       line-height: 1.15;
       font-weight: 780;
-      letter-spacing: -0.4px;
     }
 
     .page-header p {
       margin: 8px 0 0;
-
       color: var(--text-soft);
       font-size: 14px;
     }
 
     .status-badge {
       padding: 7px 14px;
-
       border: 1px solid #d2dce3;
       border-radius: 20px;
-
       background: #edf1f4;
-
       color: #536674;
-
       font-size: 12px;
       font-weight: 750;
     }
-
-    /* =========================
-       CONTENT GRID
-       ========================= */
 
     .content-grid {
       display: grid;
       grid-template-columns: minmax(0, 1fr) 320px;
       gap: 24px;
-
       align-items: start;
     }
 
-    /* =========================
-       CARDS
-       ========================= */
-
     .card {
       margin-bottom: 20px;
-
       background: var(--card);
-
       border: 1px solid var(--border);
       border-radius: 11px;
-
       overflow: hidden;
-
-      box-shadow:
-        0 3px 10px rgba(31,55,75,0.045);
+      box-shadow: 0 3px 10px rgba(31,55,75,0.045);
     }
 
     .card-header {
       padding: 18px 22px;
-
-      background:
-        linear-gradient(
-          90deg,
-          #f4f9fc,
-          #ffffff
-        );
-
+      background: linear-gradient(
+        90deg,
+        #f4f9fc,
+        #ffffff
+      );
       border-bottom: 1px solid var(--border);
     }
 
@@ -333,23 +265,18 @@
     .section-number {
       width: 27px;
       height: 27px;
-
       border-radius: 7px;
-
       background: #dcecf4;
       color: var(--blue-700);
-
       display: flex;
       align-items: center;
       justify-content: center;
-
       font-size: 12px;
       font-weight: 800;
     }
 
     .card-title {
       color: var(--navy-800);
-
       font-size: 16px;
       font-weight: 760;
     }
@@ -357,7 +284,6 @@
     .card-description {
       margin-top: 5px;
       margin-left: 38px;
-
       color: #748592;
       font-size: 13px;
     }
@@ -366,14 +292,9 @@
       padding: 23px;
     }
 
-    /* =========================
-       FORM
-       ========================= */
-
     .form-row {
       display: grid;
       grid-template-columns: 1fr 1fr;
-
       gap: 20px;
     }
 
@@ -387,11 +308,8 @@
 
     label {
       display: block;
-
       margin-bottom: 8px;
-
       color: #34495a;
-
       font-weight: 680;
     }
 
@@ -401,83 +319,50 @@
 
     .optional {
       margin-left: 4px;
-
       color: #98a5af;
-
       font-size: 12px;
       font-weight: 500;
     }
 
-    input,
-    textarea {
+    input {
       width: 100%;
-
       padding: 11px 13px;
-
       border: 1px solid #c8d3dc;
       border-radius: 7px;
-
       background: white;
-
       color: var(--text-main);
-
       font-family: inherit;
       font-size: 14px;
-
       transition: 0.15s ease;
     }
 
-    input:hover,
-    textarea:hover {
+    input:hover {
       border-color: #9cacb9;
     }
 
-    input:focus,
-    textarea:focus {
+    input:focus {
       outline: none;
-
       border-color: var(--blue-600);
-
-      box-shadow:
-        0 0 0 3px rgba(39,132,168,0.12);
-    }
-
-    textarea {
-      min-height: 88px;
-      resize: vertical;
+      box-shadow: 0 0 0 3px rgba(39,132,168,0.12);
     }
 
     .helper {
       margin-top: 6px;
-
       color: var(--text-muted);
       font-size: 12px;
       line-height: 1.45;
     }
 
-    .readonly {
-      background: #f7f9fb;
-      color: #657786;
-    }
-
-    /* =========================
-       EXPENSE TYPE
-       ========================= */
-
     .expense-type {
       margin-bottom: 23px;
       padding: 15px 16px;
-
       border: 1px solid #d3e3eb;
       border-radius: 9px;
-
-      background:
-        linear-gradient(
-          90deg,
-          #eef7fa,
-          #f8fbfc
-        );
-
+      background: linear-gradient(
+        90deg,
+        #eef7fa,
+        #f8fbfc
+      );
       display: flex;
       align-items: center;
       gap: 13px;
@@ -486,51 +371,37 @@
     .expense-icon {
       width: 42px;
       height: 42px;
-
       border-radius: 9px;
-
       background: #d7eaf2;
-
       display: flex;
       align-items: center;
       justify-content: center;
-
       font-size: 20px;
     }
 
     .expense-title {
       color: var(--navy-800);
-
       font-weight: 760;
     }
 
     .expense-subtitle {
       margin-top: 3px;
-
       color: #687e8d;
-
       font-size: 12px;
     }
-
-    /* =========================
-       SUMMARY
-       ========================= */
 
     .summary-card {
       position: sticky;
       top: 20px;
-
       border-top: 4px solid var(--blue-700);
     }
 
     .summary-card .card-header {
-      background:
-        linear-gradient(
-          120deg,
-          var(--navy-900),
-          #174861
-        );
-
+      background: linear-gradient(
+        120deg,
+        var(--navy-900),
+        #174861
+      );
       border-bottom: none;
     }
 
@@ -546,9 +417,7 @@
 
     .summary-row {
       padding: 12px 0;
-
       border-bottom: 1px solid #edf1f4;
-
       display: flex;
       justify-content: space-between;
       gap: 18px;
@@ -560,20 +429,15 @@
 
     .summary-value {
       color: #34495a;
-
       font-weight: 650;
-
       text-align: right;
-
       word-break: break-word;
     }
 
     .summary-total {
       margin-top: 16px;
       padding-top: 18px;
-
       border-top: 2px solid #dce5eb;
-
       display: flex;
       justify-content: space-between;
       align-items: flex-end;
@@ -581,13 +445,11 @@
 
     .summary-total-label {
       color: #34495a;
-
       font-weight: 700;
     }
 
     .summary-total-value {
       color: var(--blue-700);
-
       font-size: 26px;
       font-weight: 820;
     }
@@ -595,35 +457,22 @@
     .summary-note {
       margin-top: 20px;
       padding: 14px;
-
       border-radius: 7px;
-
       background: #f2f7fa;
-
       color: #647987;
-
       font-size: 12px;
       line-height: 1.55;
     }
 
-    /* =========================
-       SUBMIT
-       ========================= */
-
     .submit-bar {
       padding: 18px 20px;
-
       background: white;
-
       border: 1px solid var(--border);
       border-radius: 10px;
-
       display: flex;
       justify-content: space-between;
       align-items: center;
-
-      box-shadow:
-        0 3px 10px rgba(31,55,75,0.04);
+      box-shadow: 0 3px 10px rgba(31,55,75,0.04);
     }
 
     .submit-note {
@@ -633,50 +482,33 @@
 
     .submit-button {
       min-width: 135px;
-
       padding: 11px 26px;
-
       border: none;
       border-radius: 7px;
-
-      background:
-        linear-gradient(
-          110deg,
-          var(--blue-700),
-          #155b7c
-        );
-
+      background: linear-gradient(
+        110deg,
+        var(--blue-700),
+        #155b7c
+      );
       color: white;
-
       font-family: inherit;
       font-size: 14px;
       font-weight: 760;
-
       cursor: pointer;
-
-      box-shadow:
-        0 3px 7px rgba(23,107,143,0.20);
+      box-shadow: 0 3px 7px rgba(23,107,143,0.20);
     }
 
     .submit-button:hover {
       background: #125874;
     }
 
-    /* =========================
-       SUCCESS
-       ========================= */
-
     #submissionResult {
       display: none;
-
       margin-bottom: 23px;
       padding: 19px 21px;
-
       border: 1px solid var(--success-border);
       border-left: 5px solid var(--success);
-
       border-radius: 9px;
-
       background: var(--success-bg);
     }
 
@@ -688,33 +520,25 @@
     .success-icon {
       width: 37px;
       height: 37px;
-
       flex-shrink: 0;
-
       border-radius: 50%;
-
       background: #ccebd7;
       color: var(--success);
-
       display: flex;
       align-items: center;
       justify-content: center;
-
       font-weight: 800;
     }
 
     .success-title {
       color: #196a43;
-
       font-size: 16px;
       font-weight: 780;
     }
 
     .success-details {
       margin-top: 7px;
-
       color: #367557;
-
       line-height: 1.7;
     }
 
@@ -723,17 +547,10 @@
       font-weight: 800;
     }
 
-    /* =========================
-       FOOTER
-       ========================= */
-
     .footer {
       margin-top: 26px;
-
       color: #91a0ad;
-
       font-size: 11px;
-
       text-align: center;
     }
 
@@ -743,10 +560,7 @@
         display: none;
       }
 
-      .content-grid {
-        grid-template-columns: 1fr;
-      }
-
+      .content-grid,
       .form-row {
         grid-template-columns: 1fr;
       }
@@ -764,9 +578,6 @@
 
 
 <body>
-
-
-  <!-- TOP BAR -->
 
   <header class="topbar">
 
@@ -817,52 +628,42 @@
   <div class="layout">
 
 
-    <!-- SIDEBAR -->
-
     <aside class="sidebar">
 
       <div class="nav-title">
         Workspace
       </div>
 
-
       <div class="nav-item">
         <span class="nav-icon">⌂</span>
         Home
       </div>
-
 
       <div class="nav-item active">
         <span class="nav-icon">▤</span>
         Expenses
       </div>
 
-
       <div class="nav-item">
         <span class="nav-icon">✓</span>
         Approvals
       </div>
-
 
       <div class="nav-item">
         <span class="nav-icon">◷</span>
         Claim History
       </div>
 
-
       <div style="height: 24px;"></div>
-
 
       <div class="nav-title">
         Resources
       </div>
 
-
       <div class="nav-item">
         <span class="nav-icon">?</span>
         Expense Policy
       </div>
-
 
       <div class="nav-item">
         <span class="nav-icon">⚙</span>
@@ -871,8 +672,6 @@
 
     </aside>
 
-
-    <!-- MAIN -->
 
     <main class="main">
 
@@ -914,8 +713,6 @@
       </div>
 
 
-      <!-- SUCCESS RESULT -->
-
       <div id="submissionResult">
 
         <div class="success-layout">
@@ -932,7 +729,6 @@
             >
               Expense claim submitted successfully
             </div>
-
 
             <div class="success-details">
 
@@ -961,12 +757,8 @@
         <div class="content-grid">
 
 
-          <!-- LEFT COLUMN -->
-
           <div>
 
-
-            <!-- 1 CLAIMANT -->
 
             <section class="card">
 
@@ -993,7 +785,6 @@
 
               <div class="card-body">
 
-
                 <div class="form-group">
 
                   <label for="employeeName">
@@ -1012,13 +803,10 @@
 
                 </div>
 
-
               </div>
 
             </section>
 
-
-            <!-- 2 CLAIM DETAILS -->
 
             <section class="card">
 
@@ -1142,16 +930,12 @@
 
                   </div>
 
-
                 </div>
-
 
               </div>
 
             </section>
 
-
-            <!-- 3 SUPPORTING RECORD -->
 
             <section class="card">
 
@@ -1177,7 +961,6 @@
 
 
               <div class="card-body">
-
 
                 <div class="form-group">
 
@@ -1205,41 +988,16 @@
 
                 </div>
 
-
-                <div class="form-group">
-
-                  <label for="remarks">
-                    Remarks
-                  </label>
-
-                  <textarea
-                    id="remarks"
-                    name="Remarks"
-                    aria-label="Remarks"
-                    class="readonly"
-                    readonly
-                  >Submitted through the automated overtime taxi reimbursement workflow.</textarea>
-
-                  <div class="helper">
-                    Generated automatically by the reimbursement workflow.
-                  </div>
-
-                </div>
-
-
               </div>
 
             </section>
 
-
-            <!-- SUBMIT -->
 
             <div class="submit-bar">
 
               <div class="submit-note">
                 Required fields are marked with *
               </div>
-
 
               <button
                 type="submit"
@@ -1256,13 +1014,10 @@
           </div>
 
 
-          <!-- RIGHT COLUMN -->
-
           <aside>
 
 
             <section class="card summary-card">
-
 
               <div class="card-header">
 
@@ -1355,9 +1110,8 @@
 
 
                 <div class="summary-note">
-                  The reimbursable amount is calculated before this portal submission by the upstream reimbursement workflow.
+                  The reimbursable amount is calculated before portal submission by the upstream reimbursement workflow.
                 </div>
-
 
               </div>
 
@@ -1496,14 +1250,11 @@
           pageStatus.textContent =
             "Submitted";
 
-
           pageStatus.style.background =
             "#edf9f2";
 
-
           pageStatus.style.color =
             "#147a4b";
-
 
           pageStatus.style.borderColor =
             "#a8d7bb";
@@ -1529,5 +1280,4 @@
 
 
 </body>
-
 </html>
