@@ -15,61 +15,59 @@
     body {
       margin: 0;
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
-      background: #f5f7fa;
-      color: #1d2939;
+      background: #f3f6f9;
+      color: #172033;
       font-size: 14px;
     }
 
-    /* =========================
-       TOP BAR
-       ========================= */
+    /* TOP HEADER */
 
     .topbar {
-      height: 68px;
-      background: #ffffff;
-      border-bottom: 1px solid #e4e7ec;
+      height: 72px;
+      background: #102a43;
+      color: white;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 0 30px;
+      padding: 0 32px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
     }
 
     .brand {
       display: flex;
       align-items: center;
-      gap: 12px;
+      gap: 13px;
     }
 
     .brand-logo {
-      width: 38px;
-      height: 38px;
-      border-radius: 7px;
-      background: #173b57;
-      color: white;
+      width: 40px;
+      height: 40px;
+      border-radius: 8px;
+      background: #2d6a8c;
       display: flex;
       align-items: center;
       justify-content: center;
       font-weight: 700;
       font-size: 15px;
-      letter-spacing: 0.4px;
+      letter-spacing: 0.5px;
     }
 
     .brand-name {
-      font-size: 16px;
-      font-weight: 650;
-      color: #101828;
+      font-size: 17px;
+      font-weight: 700;
+      letter-spacing: 0.1px;
     }
 
     .brand-subtitle {
-      margin-top: 2px;
+      margin-top: 3px;
       font-size: 12px;
-      color: #667085;
+      color: #c7d5e0;
     }
 
     .account {
       display: flex;
       align-items: center;
-      gap: 11px;
+      gap: 12px;
     }
 
     .account-text {
@@ -77,22 +75,21 @@
     }
 
     .account-name {
-      font-weight: 600;
-      color: #344054;
+      font-weight: 650;
     }
 
     .account-role {
-      margin-top: 2px;
+      margin-top: 3px;
       font-size: 12px;
-      color: #98a2b3;
+      color: #c7d5e0;
     }
 
     .account-avatar {
-      width: 38px;
-      height: 38px;
+      width: 39px;
+      height: 39px;
       border-radius: 50%;
-      background: #e8eef3;
-      color: #173b57;
+      background: #d9e9f2;
+      color: #102a43;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -100,47 +97,48 @@
       font-size: 13px;
     }
 
-    /* =========================
-       PAGE LAYOUT
-       ========================= */
+    /* LAYOUT */
 
     .layout {
       display: flex;
-      min-height: calc(100vh - 68px);
+      min-height: calc(100vh - 72px);
     }
 
+    /* SIDEBAR */
+
     .sidebar {
-      width: 220px;
-      background: white;
-      border-right: 1px solid #e4e7ec;
-      padding: 24px 14px;
+      width: 222px;
+      background: #ffffff;
+      border-right: 1px solid #dfe6ec;
+      padding: 25px 14px;
     }
 
     .nav-title {
       padding: 0 12px;
-      margin-bottom: 8px;
-      color: #98a2b3;
+      margin-bottom: 9px;
+      color: #8a99a8;
       font-size: 11px;
-      font-weight: 700;
+      font-weight: 750;
       text-transform: uppercase;
-      letter-spacing: 0.7px;
+      letter-spacing: 0.8px;
     }
 
     .nav-item {
       padding: 11px 12px;
-      margin-bottom: 4px;
-      border-radius: 6px;
-      color: #475467;
+      margin-bottom: 5px;
+      border-radius: 7px;
+      color: #52616f;
       display: flex;
       align-items: center;
-      gap: 10px;
+      gap: 11px;
       font-weight: 500;
     }
 
     .nav-item.active {
-      background: #eef3f7;
-      color: #173b57;
-      font-weight: 650;
+      background: #e8f1f7;
+      color: #174c6e;
+      font-weight: 700;
+      border-left: 3px solid #2d6a8c;
     }
 
     .nav-icon {
@@ -148,110 +146,116 @@
       text-align: center;
     }
 
+    /* MAIN */
+
     .main {
       flex: 1;
+      padding: 30px 36px 50px;
       max-width: 1400px;
-      padding: 28px 34px 50px;
     }
 
-    /* =========================
-       PAGE HEADER
-       ========================= */
-
     .breadcrumb {
-      margin-bottom: 13px;
-      color: #667085;
+      margin-bottom: 14px;
+      color: #7a8996;
       font-size: 13px;
     }
 
     .breadcrumb span {
-      color: #173b57;
+      color: #174c6e;
+      font-weight: 600;
     }
+
+    /* PAGE TITLE */
 
     .page-header {
       display: flex;
-      align-items: flex-start;
       justify-content: space-between;
-      margin-bottom: 24px;
+      align-items: flex-start;
+      margin-bottom: 26px;
+    }
+
+    .page-title-block {
+      border-left: 5px solid #2d6a8c;
+      padding-left: 15px;
     }
 
     .page-header h1 {
       margin: 0;
-      color: #101828;
-      font-size: 27px;
-      font-weight: 650;
+      color: #102a43;
+      font-size: 30px;
+      line-height: 1.15;
+      font-weight: 750;
     }
 
     .page-header p {
-      margin: 7px 0 0;
-      color: #667085;
+      margin: 8px 0 0;
+      color: #657786;
+      font-size: 14px;
     }
 
     .status-badge {
-      padding: 6px 12px;
+      padding: 7px 14px;
       border-radius: 20px;
-      border: 1px solid #e4e7ec;
-      background: #f2f4f7;
-      color: #475467;
+      border: 1px solid #d5dee6;
+      background: #eef2f5;
+      color: #52616f;
       font-size: 12px;
-      font-weight: 650;
+      font-weight: 700;
     }
 
-    /* =========================
-       CONTENT GRID
-       ========================= */
+    /* CONTENT */
 
     .content-grid {
       display: grid;
-      grid-template-columns: minmax(0, 1fr) 310px;
-      gap: 22px;
+      grid-template-columns: minmax(0, 1fr) 315px;
+      gap: 24px;
       align-items: start;
     }
 
-    /* =========================
-       CARDS
-       ========================= */
+    /* CARD */
 
     .card {
-      margin-bottom: 18px;
+      margin-bottom: 20px;
       background: white;
-      border: 1px solid #e4e7ec;
-      border-radius: 8px;
+      border: 1px solid #dfe6ec;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 2px 7px rgba(31, 55, 75, 0.04);
     }
 
     .card-header {
-      padding: 18px 22px;
-      border-bottom: 1px solid #eaecf0;
+      padding: 17px 22px;
+      background: #f5f9fc;
+      border-bottom: 1px solid #dfe6ec;
+      border-left: 4px solid #2d6a8c;
     }
 
     .card-title {
-      color: #101828;
+      color: #173b57;
       font-size: 16px;
-      font-weight: 650;
+      font-weight: 750;
     }
 
     .card-description {
-      margin-top: 4px;
-      color: #667085;
+      margin-top: 5px;
+      color: #738391;
       font-size: 13px;
     }
 
     .card-body {
-      padding: 22px;
+      padding: 23px;
     }
 
-    /* =========================
-       FORM
-       ========================= */
+    /* FORM */
 
     .form-row {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 18px;
+      gap: 20px;
     }
 
     .form-group {
-      margin-bottom: 20px;
+      margin-bottom: 21px;
     }
 
     .form-group:last-child {
@@ -260,249 +264,248 @@
 
     label {
       display: block;
-      margin-bottom: 7px;
-      color: #344054;
-      font-weight: 600;
+      margin-bottom: 8px;
+      color: #34495a;
+      font-weight: 650;
     }
 
     .required {
-      color: #d92d20;
+      color: #c83c3c;
     }
 
     input,
     textarea {
       width: 100%;
-      padding: 10px 12px;
-      border: 1px solid #d0d5dd;
-      border-radius: 6px;
+      padding: 11px 13px;
+      border: 1px solid #cbd5df;
+      border-radius: 7px;
       background: white;
-      color: #101828;
+      color: #172033;
       font-family: inherit;
       font-size: 14px;
-      transition: 0.15s ease;
     }
 
     input:hover,
     textarea:hover {
-      border-color: #98a2b3;
+      border-color: #9cabb8;
     }
 
     input:focus,
     textarea:focus {
       outline: none;
-      border-color: #547891;
-      box-shadow: 0 0 0 3px rgba(84, 120, 145, 0.12);
+      border-color: #2d6a8c;
+      box-shadow: 0 0 0 3px rgba(45, 106, 140, 0.12);
     }
 
     textarea {
-      min-height: 82px;
+      min-height: 86px;
       resize: vertical;
     }
 
     .helper {
       margin-top: 6px;
-      color: #98a2b3;
+      color: #8a99a8;
       font-size: 12px;
     }
 
     .readonly {
-      background: #f9fafb;
-      color: #667085;
+      background: #f7f9fb;
+      color: #697987;
     }
 
-    /* =========================
-       EXPENSE TYPE
-       ========================= */
+    /* EXPENSE TYPE */
 
     .expense-type {
-      margin-bottom: 21px;
-      padding: 13px 15px;
-      border: 1px solid #e4e7ec;
-      border-radius: 7px;
-      background: #f9fafb;
+      margin-bottom: 22px;
+      padding: 14px 16px;
+      border: 1px solid #d5e4ed;
+      border-radius: 8px;
+      background: #eef6fa;
       display: flex;
       align-items: center;
-      gap: 12px;
+      gap: 13px;
     }
 
     .expense-icon {
-      width: 38px;
-      height: 38px;
-      border-radius: 7px;
-      background: #e7eef4;
+      width: 41px;
+      height: 41px;
+      border-radius: 8px;
+      background: #d9eaf3;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 19px;
+      font-size: 20px;
     }
 
     .expense-title {
-      color: #344054;
-      font-weight: 650;
+      color: #173b57;
+      font-weight: 750;
     }
 
     .expense-subtitle {
-      margin-top: 2px;
-      color: #667085;
+      margin-top: 3px;
+      color: #667d8d;
       font-size: 12px;
     }
 
-    /* =========================
-       SUMMARY
-       ========================= */
+    /* SUMMARY */
 
     .summary-card {
       position: sticky;
       top: 20px;
+      border-top: 4px solid #2d6a8c;
+    }
+
+    .summary-card .card-header {
+      background: #173b57;
+      border-left: none;
+      border-bottom: none;
+    }
+
+    .summary-card .card-title {
+      color: white;
+      font-size: 17px;
     }
 
     .summary-row {
       display: flex;
       justify-content: space-between;
-      gap: 20px;
-      padding: 11px 0;
-      border-bottom: 1px solid #f0f1f3;
+      gap: 18px;
+      padding: 12px 0;
+      border-bottom: 1px solid #edf1f4;
     }
 
     .summary-label {
-      color: #667085;
+      color: #71818e;
     }
 
     .summary-value {
-      color: #344054;
-      font-weight: 600;
+      color: #34495a;
+      font-weight: 650;
       text-align: right;
       word-break: break-word;
     }
 
     .summary-total {
-      margin-top: 14px;
-      padding-top: 15px;
-      border-top: 1px solid #d0d5dd;
+      margin-top: 15px;
+      padding-top: 17px;
+      border-top: 2px solid #dce5eb;
       display: flex;
-      align-items: flex-end;
       justify-content: space-between;
+      align-items: flex-end;
     }
 
     .summary-total-label {
-      color: #344054;
-      font-weight: 650;
-    }
-
-    .summary-total-value {
-      color: #173b57;
-      font-size: 23px;
+      color: #34495a;
       font-weight: 700;
     }
 
-    .summary-note {
-      margin-top: 18px;
-      padding: 13px;
-      border: 1px solid #e4e7ec;
-      border-radius: 6px;
-      background: #f8fafc;
-      color: #667085;
-      font-size: 12px;
-      line-height: 1.5;
+    .summary-total-value {
+      color: #174c6e;
+      font-size: 25px;
+      font-weight: 800;
     }
 
-    /* =========================
-       SUBMIT
-       ========================= */
+    .summary-note {
+      margin-top: 20px;
+      padding: 14px;
+      border-radius: 7px;
+      background: #f4f8fb;
+      color: #657786;
+      font-size: 12px;
+      line-height: 1.55;
+    }
+
+    /* SUBMIT AREA */
 
     .submit-bar {
-      padding: 16px 20px;
+      padding: 17px 20px;
       background: white;
-      border: 1px solid #e4e7ec;
-      border-radius: 8px;
+      border: 1px solid #dfe6ec;
+      border-radius: 10px;
       display: flex;
-      align-items: center;
       justify-content: space-between;
+      align-items: center;
     }
 
     .submit-note {
-      color: #667085;
+      color: #768693;
       font-size: 12px;
     }
 
     .submit-button {
-      min-width: 115px;
-      padding: 10px 22px;
-      border: 1px solid #173b57;
-      border-radius: 6px;
-      background: #173b57;
+      min-width: 130px;
+      padding: 11px 25px;
+      border: none;
+      border-radius: 7px;
+      background: #176b8f;
       color: white;
       font-family: inherit;
       font-size: 14px;
-      font-weight: 650;
+      font-weight: 750;
       cursor: pointer;
+      box-shadow: 0 2px 5px rgba(23, 107, 143, 0.18);
     }
 
     .submit-button:hover {
-      background: #102f47;
+      background: #125874;
     }
 
-    /* =========================
-       SUCCESS PANEL
-       ========================= */
+    /* SUCCESS */
 
     #submissionResult {
       display: none;
-      margin-bottom: 20px;
-      padding: 17px 20px;
-      border: 1px solid #abefc6;
-      border-radius: 8px;
-      background: #ecfdf3;
+      margin-bottom: 22px;
+      padding: 18px 21px;
+      border: 1px solid #a8d7bb;
+      border-left: 5px solid #278354;
+      border-radius: 9px;
+      background: #edf9f2;
     }
 
     .success-layout {
       display: flex;
-      gap: 13px;
+      gap: 14px;
     }
 
     .success-icon {
-      width: 35px;
-      height: 35px;
+      width: 36px;
+      height: 36px;
       flex-shrink: 0;
       border-radius: 50%;
-      background: #d1fadf;
-      color: #067647;
+      background: #ccebd7;
+      color: #1d7045;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-weight: 700;
+      font-weight: 800;
     }
 
     .success-title {
-      color: #05603a;
-      font-size: 15px;
-      font-weight: 650;
+      color: #1d7045;
+      font-size: 16px;
+      font-weight: 750;
     }
 
     .success-details {
-      margin-top: 6px;
-      color: #067647;
-      line-height: 1.6;
+      margin-top: 7px;
+      color: #367557;
+      line-height: 1.65;
     }
 
     #claimId,
     #submissionStatus {
-      font-weight: 700;
+      font-weight: 800;
     }
 
-    /* =========================
-       FOOTER
-       ========================= */
-
     .footer {
-      margin-top: 24px;
+      margin-top: 25px;
       text-align: center;
-      color: #98a2b3;
+      color: #91a0ad;
       font-size: 11px;
     }
 
     @media (max-width: 950px) {
-
       .sidebar {
         display: none;
       }
@@ -520,184 +523,164 @@
       }
     }
   </style>
-
 </head>
+
 
 <body>
 
-  <!-- =========================
-       TOP BAR
-       ========================= -->
+<header class="topbar">
 
-  <header class="topbar">
+  <div class="brand">
 
-    <div class="brand">
+    <div class="brand-logo">
+      NS
+    </div>
 
-      <div class="brand-logo">
-        NS
+    <div>
+      <div class="brand-name">
+        Northbridge Securities
       </div>
 
-      <div>
+      <div class="brand-subtitle">
+        Corporate Services
+      </div>
+    </div>
 
-        <div class="brand-name">
-          Northbridge Securities
-        </div>
+  </div>
 
-        <div class="brand-subtitle">
-          Corporate Services
-        </div>
 
+  <div class="account">
+
+    <div class="account-text">
+      <div class="account-name">
+        Finance Automation
+      </div>
+
+      <div class="account-role">
+        Service Account
+      </div>
+    </div>
+
+    <div class="account-avatar">
+      FA
+    </div>
+
+  </div>
+
+</header>
+
+
+<div class="layout">
+
+
+  <aside class="sidebar">
+
+    <div class="nav-title">
+      Workspace
+    </div>
+
+    <div class="nav-item">
+      <span class="nav-icon">⌂</span>
+      Home
+    </div>
+
+    <div class="nav-item active">
+      <span class="nav-icon">▤</span>
+      Expenses
+    </div>
+
+    <div class="nav-item">
+      <span class="nav-icon">✓</span>
+      Approvals
+    </div>
+
+    <div class="nav-item">
+      <span class="nav-icon">◷</span>
+      Claim History
+    </div>
+
+
+    <div style="height: 24px;"></div>
+
+
+    <div class="nav-title">
+      Resources
+    </div>
+
+    <div class="nav-item">
+      <span class="nav-icon">?</span>
+      Expense Policy
+    </div>
+
+    <div class="nav-item">
+      <span class="nav-icon">⚙</span>
+      Help & Support
+    </div>
+
+  </aside>
+
+
+  <main class="main">
+
+    <div class="breadcrumb">
+      Expenses &nbsp;/&nbsp;
+      <span>New Claim</span>
+    </div>
+
+
+    <div class="page-header">
+
+      <div class="page-title-block">
+
+        <h1>
+          New Expense Claim
+        </h1>
+
+        <p>
+          Submit an overtime taxi reimbursement request for processing.
+        </p>
+
+      </div>
+
+
+      <div
+        class="status-badge"
+        id="pageStatus"
+      >
+        Draft
       </div>
 
     </div>
 
 
-    <div class="account">
+    <div id="submissionResult">
 
-      <div class="account-text">
+      <div class="success-layout">
 
-        <div class="account-name">
-          Finance Automation
+        <div class="success-icon">
+          ✓
         </div>
-
-        <div class="account-role">
-          Service Account
-        </div>
-
-      </div>
-
-      <div class="account-avatar">
-        FA
-      </div>
-
-    </div>
-
-  </header>
-
-
-  <!-- =========================
-       PAGE
-       ========================= -->
-
-  <div class="layout">
-
-    <!-- SIDEBAR -->
-
-    <aside class="sidebar">
-
-      <div class="nav-title">
-        Workspace
-      </div>
-
-      <div class="nav-item">
-        <span class="nav-icon">⌂</span>
-        Home
-      </div>
-
-      <div class="nav-item active">
-        <span class="nav-icon">▤</span>
-        Expenses
-      </div>
-
-      <div class="nav-item">
-        <span class="nav-icon">✓</span>
-        Approvals
-      </div>
-
-      <div class="nav-item">
-        <span class="nav-icon">◷</span>
-        Claim History
-      </div>
-
-
-      <div style="height: 22px;"></div>
-
-
-      <div class="nav-title">
-        Resources
-      </div>
-
-      <div class="nav-item">
-        <span class="nav-icon">?</span>
-        Expense Policy
-      </div>
-
-      <div class="nav-item">
-        <span class="nav-icon">⚙</span>
-        Help & Support
-      </div>
-
-    </aside>
-
-
-    <!-- MAIN -->
-
-    <main class="main">
-
-      <div class="breadcrumb">
-        Expenses
-        &nbsp;/&nbsp;
-        <span>New Claim</span>
-      </div>
-
-
-      <div class="page-header">
 
         <div>
 
-          <h1>
-            New Expense Claim
-          </h1>
-
-          <p>
-            Submit an overtime taxi reimbursement request for processing.
-          </p>
-
-        </div>
-
-
-        <div
-          class="status-badge"
-          id="pageStatus"
-        >
-          Draft
-        </div>
-
-      </div>
-
-
-      <!-- SUCCESS RESULT -->
-
-      <div id="submissionResult">
-
-        <div class="success-layout">
-
-          <div class="success-icon">
-            ✓
+          <div
+            class="success-title"
+            id="successMessage"
+          >
+            Expense claim submitted successfully
           </div>
 
-          <div>
+          <div class="success-details">
 
-            <div
-              class="success-title"
-              id="successMessage"
-            >
-              Expense claim submitted successfully
-            </div>
+            Claim ID:
+            <span id="claimId"></span>
 
-            <div class="success-details">
+            <br>
 
-              Claim ID:
-              <span id="claimId"></span>
-
-              <br>
-
-              Submission Status:
-              <span id="submissionStatus">
-                SUCCESS
-              </span>
-
-            </div>
+            Submission Status:
+            <span id="submissionStatus">
+              SUCCESS
+            </span>
 
           </div>
 
@@ -705,612 +688,586 @@
 
       </div>
 
-
-      <form id="claimForm">
-
-
-        <div class="content-grid">
+    </div>
 
 
-          <!-- =========================
-               LEFT SIDE
-               ========================= -->
-
-          <div>
+    <form id="claimForm">
 
 
-            <!-- CLAIMANT INFORMATION -->
+      <div class="content-grid">
 
-            <section class="card">
 
-              <div class="card-header">
+        <div>
 
-                <div class="card-title">
-                  Claimant Information
-                </div>
 
-                <div class="card-description">
-                  Enter the employee information for this reimbursement batch.
-                </div>
+          <section class="card">
 
+            <div class="card-header">
+
+              <div class="card-title">
+                Claimant Information
               </div>
 
-
-              <div class="card-body">
-
-
-                <div class="form-row">
-
-
-                  <div class="form-group">
-
-                    <label for="employeeName">
-                      Employee Name
-                      <span class="required">*</span>
-                    </label>
-
-                    <input
-                      type="text"
-                      id="employeeName"
-                      name="Employee Name"
-                      aria-label="Employee Name"
-                      placeholder="e.g. Daniel Wong"
-                      required
-                    >
-
-                  </div>
-
-
-                  <div class="form-group">
-
-                    <label for="department">
-                      Department
-                      <span class="required">*</span>
-                    </label>
-
-                    <input
-                      type="text"
-                      id="department"
-                      name="Department"
-                      aria-label="Department"
-                      placeholder="e.g. Capital Markets Operations"
-                      required
-                    >
-
-                  </div>
-
-
-                </div>
-
-
+              <div class="card-description">
+                Employee information associated with this reimbursement batch.
               </div>
 
-            </section>
+            </div>
 
 
-            <!-- CLAIM DETAILS -->
-
-            <section class="card">
-
-              <div class="card-header">
-
-                <div class="card-title">
-                  Claim Details
-                </div>
-
-                <div class="card-description">
-                  Enter the processed reimbursement information.
-                </div>
-
-              </div>
+            <div class="card-body">
 
 
-              <div class="card-body">
-
-
-                <div class="expense-type">
-
-                  <div class="expense-icon">
-                    🚕
-                  </div>
-
-                  <div>
-
-                    <div class="expense-title">
-                      Overtime Taxi Reimbursement
-                    </div>
-
-                    <div class="expense-subtitle">
-                      Transportation · Employee Expense
-                    </div>
-
-                  </div>
-
-                </div>
+              <div class="form-row">
 
 
                 <div class="form-group">
 
-                  <label for="batchId">
-                    Batch ID
+                  <label for="employeeName">
+                    Employee Name
                     <span class="required">*</span>
                   </label>
 
                   <input
                     type="text"
-                    id="batchId"
-                    name="Batch ID"
-                    aria-label="Batch ID"
-                    placeholder="e.g. BATCH-2026-0915"
+                    id="employeeName"
+                    name="Employee Name"
+                    aria-label="Employee Name"
+                    placeholder="e.g. Daniel Wong"
                     required
                   >
 
-                  <div class="helper">
-                    Processing batch reference from the upstream workflow.
-                  </div>
-
                 </div>
-
-
-                <div class="form-row">
-
-
-                  <div class="form-group">
-
-                    <label for="originalAmount">
-                      Total Original Amount
-                      <span class="required">*</span>
-                    </label>
-
-                    <input
-                      type="number"
-                      id="originalAmount"
-                      name="Total Original Amount"
-                      aria-label="Total Original Amount"
-                      min="0"
-                      step="0.01"
-                      placeholder="0.00"
-                      required
-                    >
-
-                    <div class="helper">
-                      SGD
-                    </div>
-
-                  </div>
-
-
-                  <div class="form-group">
-
-                    <label for="reimbursableAmount">
-                      Total Reimbursable Amount
-                      <span class="required">*</span>
-                    </label>
-
-                    <input
-                      type="number"
-                      id="reimbursableAmount"
-                      name="Total Reimbursable Amount"
-                      aria-label="Total Reimbursable Amount"
-                      min="0"
-                      step="0.01"
-                      placeholder="0.00"
-                      required
-                    >
-
-                    <div class="helper">
-                      SGD · After reimbursement policy
-                    </div>
-
-                  </div>
-
-
-                </div>
-
-
-              </div>
-
-            </section>
-
-
-            <!-- SUPPORTING DETAILS -->
-
-            <section class="card">
-
-              <div class="card-header">
-
-                <div class="card-title">
-                  Supporting Details
-                </div>
-
-                <div class="card-description">
-                  Link this submission to the processed claim record.
-                </div>
-
-              </div>
-
-
-              <div class="card-body">
 
 
                 <div class="form-group">
 
-                  <label for="detailsLink">
-                    Claim Details Link
+                  <label for="department">
+                    Department
                     <span class="required">*</span>
                   </label>
 
                   <input
-                    type="url"
-                    id="detailsLink"
-                    name="Details Link"
-                    aria-label="Claim Details Link"
-                    placeholder="https://..."
+                    type="text"
+                    id="department"
+                    name="Department"
+                    aria-label="Department"
+                    placeholder="e.g. Capital Markets Operations"
                     required
                   >
 
-                  <div class="helper">
-                    Link to the claim summary or supporting record.
-                  </div>
-
-                </div>
-
-
-                <div class="form-group">
-
-                  <label for="remarks">
-                    Remarks
-                  </label>
-
-                  <textarea
-                    id="remarks"
-                    name="Remarks"
-                    aria-label="Remarks"
-                    class="readonly"
-                    readonly
-                  >Submitted through the automated overtime taxi reimbursement workflow.</textarea>
-
-                  <div class="helper">
-                    Generated automatically by the reimbursement process.
-                  </div>
-
                 </div>
 
 
               </div>
 
-            </section>
+            </div>
+
+          </section>
 
 
-            <!-- SUBMIT -->
+          <section class="card">
 
-            <div class="submit-bar">
+            <div class="card-header">
 
-              <div class="submit-note">
-                Required fields are marked with *
+              <div class="card-title">
+                Claim Details
               </div>
 
-              <button
-                type="submit"
-                id="submitButton"
-                class="submit-button"
-                aria-label="Submit"
-              >
-                Submit
-              </button>
+              <div class="card-description">
+                Reimbursement information calculated by the upstream workflow.
+              </div>
 
             </div>
 
 
-          </div>
+            <div class="card-body">
 
 
-          <!-- =========================
-               RIGHT SIDE SUMMARY
-               ========================= -->
+              <div class="expense-type">
 
-          <aside>
+                <div class="expense-icon">
+                  🚕
+                </div>
 
+                <div>
 
-            <section class="card summary-card">
+                  <div class="expense-title">
+                    Overtime Taxi Reimbursement
+                  </div>
 
+                  <div class="expense-subtitle">
+                    Transportation · Employee Expense
+                  </div>
 
-              <div class="card-header">
-
-                <div class="card-title">
-                  Claim Summary
                 </div>
 
               </div>
 
 
-              <div class="card-body">
+              <div class="form-group">
+
+                <label for="batchId">
+                  Batch ID
+                  <span class="required">*</span>
+                </label>
+
+                <input
+                  type="text"
+                  id="batchId"
+                  name="Batch ID"
+                  aria-label="Batch ID"
+                  placeholder="e.g. BATCH-2026-0915"
+                  required
+                >
+
+                <div class="helper">
+                  Processing batch reference from the upstream workflow.
+                </div>
+
+              </div>
 
 
-                <div class="summary-row">
+              <div class="form-row">
 
-                  <div class="summary-label">
-                    Employee
-                  </div>
 
-                  <div
-                    class="summary-value"
-                    id="summaryEmployee"
+                <div class="form-group">
+
+                  <label for="originalAmount">
+                    Total Original Amount
+                    <span class="required">*</span>
+                  </label>
+
+                  <input
+                    type="number"
+                    id="originalAmount"
+                    name="Total Original Amount"
+                    aria-label="Total Original Amount"
+                    min="0"
+                    step="0.01"
+                    placeholder="0.00"
+                    required
                   >
-                    —
-                  </div>
 
-                </div>
-
-
-                <div class="summary-row">
-
-                  <div class="summary-label">
-                    Department
-                  </div>
-
-                  <div
-                    class="summary-value"
-                    id="summaryDepartment"
-                  >
-                    —
-                  </div>
-
-                </div>
-
-
-                <div class="summary-row">
-
-                  <div class="summary-label">
-                    Expense Type
-                  </div>
-
-                  <div class="summary-value">
-                    Overtime Taxi
-                  </div>
-
-                </div>
-
-
-                <div class="summary-row">
-
-                  <div class="summary-label">
-                    Currency
-                  </div>
-
-                  <div class="summary-value">
+                  <div class="helper">
                     SGD
                   </div>
 
                 </div>
 
 
-                <div class="summary-row">
+                <div class="form-group">
 
-                  <div class="summary-label">
-                    Original Amount
-                  </div>
+                  <label for="reimbursableAmount">
+                    Total Reimbursable Amount
+                    <span class="required">*</span>
+                  </label>
 
-                  <div
-                    class="summary-value"
-                    id="summaryOriginal"
+                  <input
+                    type="number"
+                    id="reimbursableAmount"
+                    name="Total Reimbursable Amount"
+                    aria-label="Total Reimbursable Amount"
+                    min="0"
+                    step="0.01"
+                    placeholder="0.00"
+                    required
                   >
-                    S$0.00
+
+                  <div class="helper">
+                    SGD · After reimbursement policy
                   </div>
 
-                </div>
-
-
-                <div class="summary-total">
-
-                  <div class="summary-total-label">
-                    Reimbursable
-                  </div>
-
-                  <div
-                    class="summary-total-value"
-                    id="summaryReimbursable"
-                  >
-                    S$0.00
-                  </div>
-
-                </div>
-
-
-                <div class="summary-note">
-                  The reimbursable amount has already been calculated by the upstream claims processing workflow.
                 </div>
 
 
               </div>
 
-            </section>
+            </div>
+
+          </section>
 
 
-          </aside>
+          <section class="card">
+
+            <div class="card-header">
+
+              <div class="card-title">
+                Supporting Details
+              </div>
+
+              <div class="card-description">
+                Reference the detailed claim record used for this submission.
+              </div>
+
+            </div>
+
+
+            <div class="card-body">
+
+
+              <div class="form-group">
+
+                <label for="detailsLink">
+                  Claim Details Link
+                  <span class="required">*</span>
+                </label>
+
+                <input
+                  type="url"
+                  id="detailsLink"
+                  name="Details Link"
+                  aria-label="Claim Details Link"
+                  placeholder="https://..."
+                  required
+                >
+
+                <div class="helper">
+                  Link to the claim summary or supporting record.
+                </div>
+
+              </div>
+
+
+              <div class="form-group">
+
+                <label for="remarks">
+                  Remarks
+                </label>
+
+                <textarea
+                  id="remarks"
+                  name="Remarks"
+                  aria-label="Remarks"
+                  class="readonly"
+                  readonly
+                >Submitted through the automated overtime taxi reimbursement workflow.</textarea>
+
+                <div class="helper">
+                  Generated automatically by the reimbursement process.
+                </div>
+
+              </div>
+
+
+            </div>
+
+          </section>
+
+
+          <div class="submit-bar">
+
+            <div class="submit-note">
+              Required fields are marked with *
+            </div>
+
+            <button
+              type="submit"
+              id="submitButton"
+              class="submit-button"
+              aria-label="Submit"
+            >
+              Submit
+            </button>
+
+          </div>
 
 
         </div>
 
 
-      </form>
+        <aside>
 
 
-      <div class="footer">
-        Northbridge Securities · Internal Expense Management Portal
+          <section class="card summary-card">
+
+            <div class="card-header">
+
+              <div class="card-title">
+                Claim Summary
+              </div>
+
+            </div>
+
+
+            <div class="card-body">
+
+
+              <div class="summary-row">
+
+                <div class="summary-label">
+                  Employee
+                </div>
+
+                <div
+                  class="summary-value"
+                  id="summaryEmployee"
+                >
+                  —
+                </div>
+
+              </div>
+
+
+              <div class="summary-row">
+
+                <div class="summary-label">
+                  Department
+                </div>
+
+                <div
+                  class="summary-value"
+                  id="summaryDepartment"
+                >
+                  —
+                </div>
+
+              </div>
+
+
+              <div class="summary-row">
+
+                <div class="summary-label">
+                  Expense Type
+                </div>
+
+                <div class="summary-value">
+                  Overtime Taxi
+                </div>
+
+              </div>
+
+
+              <div class="summary-row">
+
+                <div class="summary-label">
+                  Currency
+                </div>
+
+                <div class="summary-value">
+                  SGD
+                </div>
+
+              </div>
+
+
+              <div class="summary-row">
+
+                <div class="summary-label">
+                  Original Amount
+                </div>
+
+                <div
+                  class="summary-value"
+                  id="summaryOriginal"
+                >
+                  S$0.00
+                </div>
+
+              </div>
+
+
+              <div class="summary-total">
+
+                <div class="summary-total-label">
+                  Reimbursable
+                </div>
+
+                <div
+                  class="summary-total-value"
+                  id="summaryReimbursable"
+                >
+                  S$0.00
+                </div>
+
+              </div>
+
+
+              <div class="summary-note">
+                The reimbursable amount has already been calculated by the upstream claims processing workflow.
+              </div>
+
+
+            </div>
+
+          </section>
+
+
+        </aside>
+
+
       </div>
 
 
-    </main>
-
-  </div>
+    </form>
 
 
-  <!-- =========================
-       SCRIPT
-       ========================= -->
-
-  <script>
-
-    const employeeName =
-      document.getElementById("employeeName");
-
-    const department =
-      document.getElementById("department");
-
-    const originalAmount =
-      document.getElementById("originalAmount");
-
-    const reimbursableAmount =
-      document.getElementById("reimbursableAmount");
+    <div class="footer">
+      Northbridge Securities · Internal Expense Management Portal
+    </div>
 
 
-    function formatSGD(value) {
+  </main>
 
-      const number =
-        parseFloat(value);
 
-      if (isNaN(number)) {
-        return "S$0.00";
-      }
+</div>
 
-      return "S$" + number.toFixed(2);
 
+<script>
+
+  const employeeName =
+    document.getElementById("employeeName");
+
+  const department =
+    document.getElementById("department");
+
+  const originalAmount =
+    document.getElementById("originalAmount");
+
+  const reimbursableAmount =
+    document.getElementById("reimbursableAmount");
+
+
+  function formatSGD(value) {
+
+    const number =
+      parseFloat(value);
+
+    if (isNaN(number)) {
+      return "S$0.00";
     }
 
+    return "S$" + number.toFixed(2);
+  }
 
-    employeeName.addEventListener(
-      "input",
-      function () {
 
-        const value =
-          employeeName.value.trim();
+  employeeName.addEventListener(
+    "input",
+    function () {
+
+      document
+        .getElementById("summaryEmployee")
+        .textContent =
+        employeeName.value.trim() || "—";
+
+    }
+  );
+
+
+  department.addEventListener(
+    "input",
+    function () {
+
+      document
+        .getElementById("summaryDepartment")
+        .textContent =
+        department.value.trim() || "—";
+
+    }
+  );
+
+
+  originalAmount.addEventListener(
+    "input",
+    function () {
+
+      document
+        .getElementById("summaryOriginal")
+        .textContent =
+        formatSGD(originalAmount.value);
+
+    }
+  );
+
+
+  reimbursableAmount.addEventListener(
+    "input",
+    function () {
+
+      document
+        .getElementById("summaryReimbursable")
+        .textContent =
+        formatSGD(reimbursableAmount.value);
+
+    }
+  );
+
+
+  document
+    .getElementById("claimForm")
+    .addEventListener(
+      "submit",
+      function (event) {
+
+        event.preventDefault();
+
+
+        const batchId =
+          document
+            .getElementById("batchId")
+            .value
+            .trim();
+
+
+        const safeBatchId =
+          batchId
+            .replace(/[^a-zA-Z0-9]/g, "")
+            .toUpperCase();
+
+
+        const claimId =
+          "CLM-" +
+          safeBatchId +
+          "-001";
+
 
         document
-          .getElementById("summaryEmployee")
+          .getElementById("claimId")
           .textContent =
-          value || "—";
+          claimId;
+
+
+        document
+          .getElementById("submissionStatus")
+          .textContent =
+          "SUCCESS";
+
+
+        const pageStatus =
+          document.getElementById("pageStatus");
+
+
+        pageStatus.textContent =
+          "Submitted";
+
+        pageStatus.style.background =
+          "#edf9f2";
+
+        pageStatus.style.color =
+          "#1d7045";
+
+        pageStatus.style.borderColor =
+          "#a8d7bb";
+
+
+        document
+          .getElementById("submissionResult")
+          .style.display =
+          "block";
+
+
+        document
+          .getElementById("submissionResult")
+          .scrollIntoView({
+            behavior: "smooth",
+            block: "start"
+          });
 
       }
     );
 
+</script>
 
-    department.addEventListener(
-      "input",
-      function () {
-
-        const value =
-          department.value.trim();
-
-        document
-          .getElementById("summaryDepartment")
-          .textContent =
-          value || "—";
-
-      }
-    );
-
-
-    originalAmount.addEventListener(
-      "input",
-      function () {
-
-        document
-          .getElementById("summaryOriginal")
-          .textContent =
-          formatSGD(originalAmount.value);
-
-      }
-    );
-
-
-    reimbursableAmount.addEventListener(
-      "input",
-      function () {
-
-        document
-          .getElementById("summaryReimbursable")
-          .textContent =
-          formatSGD(reimbursableAmount.value);
-
-      }
-    );
-
-
-    document
-      .getElementById("claimForm")
-      .addEventListener(
-        "submit",
-        function (event) {
-
-          event.preventDefault();
-
-
-          const batchId =
-            document
-              .getElementById("batchId")
-              .value
-              .trim();
-
-
-          const safeBatchId =
-            batchId
-              .replace(/[^a-zA-Z0-9]/g, "")
-              .toUpperCase();
-
-
-          const claimId =
-            "CLM-" +
-            safeBatchId +
-            "-001";
-
-
-          document
-            .getElementById("claimId")
-            .textContent =
-            claimId;
-
-
-          document
-            .getElementById("submissionStatus")
-            .textContent =
-            "SUCCESS";
-
-
-          const pageStatus =
-            document.getElementById("pageStatus");
-
-          pageStatus.textContent =
-            "Submitted";
-
-          pageStatus.style.background =
-            "#ecfdf3";
-
-          pageStatus.style.color =
-            "#067647";
-
-          pageStatus.style.borderColor =
-            "#abefc6";
-
-
-          document
-            .getElementById("submissionResult")
-            .style.display =
-            "block";
-
-
-          document
-            .getElementById("submissionResult")
-            .scrollIntoView({
-              behavior: "smooth",
-              block: "start"
-            });
-
-        }
-      );
-
-  </script>
 
 </body>
-
 </html>
