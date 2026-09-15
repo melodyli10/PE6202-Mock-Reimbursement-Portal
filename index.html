@@ -8,7 +8,6 @@
   <title>Overtime Taxi Reimbursement</title>
 
   <style>
-
     * {
       box-sizing: border-box;
     }
@@ -20,12 +19,10 @@
       color: #1f2937;
     }
 
-    /* HEADER */
-
     .header {
       background: #173b57;
       color: white;
-      padding: 30px 0;
+      padding: 32px 0;
     }
 
     .header-inner {
@@ -35,53 +32,45 @@
     }
 
     .company {
-      font-size: 15px;
+      font-size: 16px;
       font-weight: 600;
-      margin-bottom: 7px;
-      opacity: 0.9;
+      margin-bottom: 8px;
     }
 
     .header h1 {
       margin: 0;
-      font-size: 29px;
-      font-weight: 700;
+      font-size: 30px;
     }
-
-    /* PAGE */
 
     .container {
       width: 760px;
       max-width: calc(100% - 40px);
-      margin: 42px auto 70px;
+      margin: 45px auto 80px;
     }
 
     .card {
       background: white;
       border: 1px solid #d9e1e7;
       border-radius: 8px;
-      padding: 46px 48px 50px;
-      box-shadow: 0 2px 9px rgba(0,0,0,0.05);
+      padding: 48px;
+      box-shadow: 0 2px 9px rgba(0, 0, 0, 0.05);
     }
 
     .form-title {
-      margin: 0 0 42px;
+      margin: 0 0 45px;
       color: #173b57;
-      font-size: 24px;
-      font-weight: 700;
+      font-size: 25px;
     }
 
-    /* FORM */
-
     .form-group {
-      margin-bottom: 35px;
+      margin-bottom: 38px;
     }
 
     label {
       display: block;
-      margin-bottom: 11px;
-      font-size: 16px;
+      margin-bottom: 12px;
+      font-size: 17px;
       font-weight: 700;
-      color: #28394a;
     }
 
     .required {
@@ -90,26 +79,18 @@
 
     input {
       width: 100%;
-      height: 54px;
+      height: 56px;
       padding: 0 15px;
-
       border: 1px solid #bfcbd4;
       border-radius: 5px;
-
       background: white;
-      color: #1f2937;
-
       font-size: 16px;
-    }
-
-    input:hover {
-      border-color: #8fa1ae;
     }
 
     input:focus {
       outline: none;
       border-color: #176b8f;
-      box-shadow: 0 0 0 3px rgba(23,107,143,0.12);
+      box-shadow: 0 0 0 3px rgba(23, 107, 143, 0.12);
     }
 
     .amount-wrapper {
@@ -119,9 +100,8 @@
     .currency {
       position: absolute;
       right: 16px;
-      top: 17px;
-
-      color: #637482;
+      top: 18px;
+      color: #52616f;
       font-size: 14px;
       font-weight: 700;
     }
@@ -130,23 +110,16 @@
       padding-right: 70px;
     }
 
-    /* SUBMIT */
-
     button {
       width: 100%;
-      height: 54px;
-
-      margin-top: 15px;
-
+      height: 56px;
+      margin-top: 10px;
       border: none;
       border-radius: 5px;
-
       background: #176b8f;
       color: white;
-
       font-size: 16px;
       font-weight: 700;
-
       cursor: pointer;
     }
 
@@ -154,26 +127,19 @@
       background: #125874;
     }
 
-    /* SUCCESS */
-
     #submissionResult {
       display: none;
-
-      margin-top: 35px;
+      margin-top: 38px;
       padding: 24px;
-
       border: 1px solid #9dcfb0;
       border-left: 5px solid #15834f;
       border-radius: 6px;
-
       background: #edf8f1;
     }
 
     .success-title {
       margin-bottom: 16px;
-
       color: #176a43;
-
       font-size: 18px;
       font-weight: 700;
     }
@@ -192,24 +158,12 @@
       color: #176a43;
       font-weight: 700;
     }
-
-    @media (max-width: 650px) {
-
-      .card {
-        padding: 32px 25px 38px;
-      }
-
-    }
-
   </style>
 </head>
 
-
 <body>
 
-
   <div class="header">
-
     <div class="header-inner">
 
       <div class="company">
@@ -221,15 +175,12 @@
       </h1>
 
     </div>
-
   </div>
 
 
   <div class="container">
 
-
     <div class="card">
-
 
       <h2 class="form-title">
         New Expense Claim
@@ -238,8 +189,6 @@
 
       <form id="claimForm">
 
-
-        <!-- EMPLOYEE -->
 
         <div class="form-group">
 
@@ -258,8 +207,6 @@
         </div>
 
 
-        <!-- BATCH -->
-
         <div class="form-group">
 
           <label for="batchId">
@@ -277,15 +224,12 @@
         </div>
 
 
-        <!-- ORIGINAL -->
-
         <div class="form-group">
 
           <label for="originalAmount">
             Total Original Amount
             <span class="required">*</span>
           </label>
-
 
           <div class="amount-wrapper">
 
@@ -308,15 +252,12 @@
         </div>
 
 
-        <!-- REIMBURSABLE -->
-
         <div class="form-group">
 
           <label for="reimbursableAmount">
             Total Reimbursable Amount
             <span class="required">*</span>
           </label>
-
 
           <div class="amount-wrapper">
 
@@ -339,8 +280,6 @@
         </div>
 
 
-        <!-- SUBMIT -->
-
         <button
           type="submit"
           id="submitButton"
@@ -352,10 +291,7 @@
       </form>
 
 
-      <!-- RESULT -->
-
       <div id="submissionResult">
-
 
         <div
           class="success-title"
@@ -388,12 +324,9 @@
 
         </div>
 
-
       </div>
 
-
     </div>
-
 
   </div>
 
@@ -408,43 +341,36 @@
 
           event.preventDefault();
 
-
           const batchId =
             document
               .getElementById("batchId")
               .value
               .trim();
 
-
           const safeBatchId =
             batchId
               .replace(/[^a-zA-Z0-9]/g, "")
               .toUpperCase();
-
 
           const claimId =
             "CLM-" +
             safeBatchId +
             "-001";
 
-
           document
             .getElementById("claimId")
             .textContent =
             claimId;
-
 
           document
             .getElementById("submissionStatus")
             .textContent =
             "SUCCESS";
 
-
           document
             .getElementById("submissionResult")
             .style.display =
             "block";
-
 
           document
             .getElementById("submissionResult")
@@ -457,7 +383,6 @@
       );
 
   </script>
-
 
 </body>
 
