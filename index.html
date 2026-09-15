@@ -8,6 +8,7 @@
   <title>Overtime Taxi Reimbursement</title>
 
   <style>
+
     * {
       box-sizing: border-box;
     }
@@ -19,52 +20,68 @@
       color: #1f2937;
     }
 
+    /* HEADER */
+
     .header {
       background: #173b57;
       color: white;
-      padding: 22px 40px;
+      padding: 30px 0;
+    }
+
+    .header-inner {
+      width: 760px;
+      max-width: calc(100% - 40px);
+      margin: auto;
+    }
+
+    .company {
+      font-size: 15px;
+      font-weight: 600;
+      margin-bottom: 7px;
+      opacity: 0.9;
     }
 
     .header h1 {
       margin: 0;
-      font-size: 24px;
+      font-size: 29px;
+      font-weight: 700;
     }
 
+    /* PAGE */
+
     .container {
-      width: 720px;
+      width: 760px;
       max-width: calc(100% - 40px);
-      margin: 35px auto;
+      margin: 42px auto 70px;
     }
 
     .card {
       background: white;
       border: 1px solid #d9e1e7;
       border-radius: 8px;
-      padding: 30px;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+      padding: 46px 48px 50px;
+      box-shadow: 0 2px 9px rgba(0,0,0,0.05);
     }
 
     .form-title {
-      margin: 0 0 25px;
-      font-size: 22px;
+      margin: 0 0 42px;
       color: #173b57;
+      font-size: 24px;
+      font-weight: 700;
     }
+
+    /* FORM */
 
     .form-group {
-      margin-bottom: 20px;
-    }
-
-    .form-row {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 18px;
+      margin-bottom: 35px;
     }
 
     label {
       display: block;
-      margin-bottom: 8px;
+      margin-bottom: 11px;
+      font-size: 16px;
       font-weight: 700;
-      font-size: 14px;
+      color: #28394a;
     }
 
     .required {
@@ -73,34 +90,63 @@
 
     input {
       width: 100%;
-      padding: 12px;
+      height: 54px;
+      padding: 0 15px;
+
       border: 1px solid #bfcbd4;
       border-radius: 5px;
-      font-size: 15px;
+
+      background: white;
+      color: #1f2937;
+
+      font-size: 16px;
+    }
+
+    input:hover {
+      border-color: #8fa1ae;
     }
 
     input:focus {
       outline: none;
       border-color: #176b8f;
-      box-shadow: 0 0 0 2px rgba(23, 107, 143, 0.12);
+      box-shadow: 0 0 0 3px rgba(23,107,143,0.12);
+    }
+
+    .amount-wrapper {
+      position: relative;
     }
 
     .currency {
-      margin-top: 7px;
-      font-weight: 600;
-      color: #52616f;
+      position: absolute;
+      right: 16px;
+      top: 17px;
+
+      color: #637482;
+      font-size: 14px;
+      font-weight: 700;
     }
+
+    .amount-input {
+      padding-right: 70px;
+    }
+
+    /* SUBMIT */
 
     button {
       width: 100%;
-      margin-top: 8px;
-      padding: 13px;
+      height: 54px;
+
+      margin-top: 15px;
+
       border: none;
       border-radius: 5px;
+
       background: #176b8f;
       color: white;
-      font-size: 15px;
+
+      font-size: 16px;
       font-weight: 700;
+
       cursor: pointer;
     }
 
@@ -108,26 +154,33 @@
       background: #125874;
     }
 
+    /* SUCCESS */
+
     #submissionResult {
       display: none;
-      margin-top: 25px;
-      padding: 20px;
+
+      margin-top: 35px;
+      padding: 24px;
+
       border: 1px solid #9dcfb0;
       border-left: 5px solid #15834f;
       border-radius: 6px;
+
       background: #edf8f1;
     }
 
     .success-title {
-      margin-bottom: 12px;
+      margin-bottom: 16px;
+
       color: #176a43;
-      font-size: 17px;
+
+      font-size: 18px;
       font-weight: 700;
     }
 
     .result-row {
-      margin-top: 8px;
-      font-size: 15px;
+      margin-top: 10px;
+      font-size: 16px;
     }
 
     .result-label {
@@ -136,35 +189,60 @@
 
     #claimId,
     #submissionStatus {
-      font-weight: 700;
       color: #176a43;
+      font-weight: 700;
     }
 
     @media (max-width: 650px) {
-      .form-row {
-        grid-template-columns: 1fr;
+
+      .card {
+        padding: 32px 25px 38px;
       }
+
     }
+
   </style>
 </head>
 
+
 <body>
 
+
   <div class="header">
-    <h1>Northbridge Securities | Expense Claim</h1>
+
+    <div class="header-inner">
+
+      <div class="company">
+        Northbridge Securities
+      </div>
+
+      <h1>
+        Overtime Taxi Reimbursement
+      </h1>
+
+    </div>
+
   </div>
+
 
   <div class="container">
 
+
     <div class="card">
 
+
       <h2 class="form-title">
-        Overtime Taxi Reimbursement
+        New Expense Claim
       </h2>
+
 
       <form id="claimForm">
 
+
+        <!-- EMPLOYEE -->
+
         <div class="form-group">
+
           <label for="employeeName">
             Employee Name
             <span class="required">*</span>
@@ -176,10 +254,14 @@
             name="Employee Name"
             required
           >
+
         </div>
 
 
+        <!-- BATCH -->
+
         <div class="form-group">
+
           <label for="batchId">
             Batch ID
             <span class="required">*</span>
@@ -191,58 +273,73 @@
             name="Batch ID"
             required
           >
+
         </div>
 
 
-        <div class="form-row">
+        <!-- ORIGINAL -->
 
-          <div class="form-group">
+        <div class="form-group">
 
-            <label for="originalAmount">
-              Total Original Amount
-              <span class="required">*</span>
-            </label>
+          <label for="originalAmount">
+            Total Original Amount
+            <span class="required">*</span>
+          </label>
+
+
+          <div class="amount-wrapper">
 
             <input
               type="number"
               id="originalAmount"
               name="Total Original Amount"
-              step="0.01"
+              class="amount-input"
               min="0"
+              step="0.01"
               required
             >
 
-            <div class="currency">
+            <span class="currency">
               CNY
-            </div>
-
-          </div>
-
-
-          <div class="form-group">
-
-            <label for="reimbursableAmount">
-              Total Reimbursable Amount
-              <span class="required">*</span>
-            </label>
-
-            <input
-              type="number"
-              id="reimbursableAmount"
-              name="Total Reimbursable Amount"
-              step="0.01"
-              min="0"
-              required
-            >
-
-            <div class="currency">
-              CNY
-            </div>
+            </span>
 
           </div>
 
         </div>
 
+
+        <!-- REIMBURSABLE -->
+
+        <div class="form-group">
+
+          <label for="reimbursableAmount">
+            Total Reimbursable Amount
+            <span class="required">*</span>
+          </label>
+
+
+          <div class="amount-wrapper">
+
+            <input
+              type="number"
+              id="reimbursableAmount"
+              name="Total Reimbursable Amount"
+              class="amount-input"
+              min="0"
+              step="0.01"
+              required
+            >
+
+            <span class="currency">
+              CNY
+            </span>
+
+          </div>
+
+        </div>
+
+
+        <!-- SUBMIT -->
 
         <button
           type="submit"
@@ -251,10 +348,14 @@
           Submit
         </button>
 
+
       </form>
 
 
+      <!-- RESULT -->
+
       <div id="submissionResult">
+
 
         <div
           class="success-title"
@@ -263,15 +364,20 @@
           Claim submitted successfully
         </div>
 
+
         <div class="result-row">
+
           <span class="result-label">
             Claim ID:
           </span>
 
           <span id="claimId"></span>
+
         </div>
 
+
         <div class="result-row">
+
           <span class="result-label">
             Submission Status:
           </span>
@@ -279,11 +385,15 @@
           <span id="submissionStatus">
             SUCCESS
           </span>
+
         </div>
+
 
       </div>
 
+
     </div>
+
 
   </div>
 
@@ -294,9 +404,10 @@
       .getElementById("claimForm")
       .addEventListener(
         "submit",
-        function (event) {
+        function(event) {
 
           event.preventDefault();
+
 
           const batchId =
             document
@@ -304,35 +415,49 @@
               .value
               .trim();
 
+
           const safeBatchId =
             batchId
               .replace(/[^a-zA-Z0-9]/g, "")
               .toUpperCase();
+
 
           const claimId =
             "CLM-" +
             safeBatchId +
             "-001";
 
+
           document
             .getElementById("claimId")
             .textContent =
             claimId;
+
 
           document
             .getElementById("submissionStatus")
             .textContent =
             "SUCCESS";
 
+
           document
             .getElementById("submissionResult")
             .style.display =
             "block";
 
+
+          document
+            .getElementById("submissionResult")
+            .scrollIntoView({
+              behavior: "smooth",
+              block: "center"
+            });
+
         }
       );
 
   </script>
+
 
 </body>
 
